@@ -10,6 +10,7 @@ import CleanTime from '../components/Time';
 import Comments from '../components/Comments';
 // import Posts from '../components/Posts';
 import Layout from '../components/layout';
+import Img from 'gatsby-image';
 
 const Time = styled(CleanTime)`
   text-align: center;
@@ -29,6 +30,7 @@ const Post = styled.article`
 
 const H1 = styled.h1`
   padding-bottom: 0;
+  margin: ${props => props.theme.blog.post.header.margin};
   font-size: ${props => props.theme.blog.post.header.fontSize};
 `;
 
@@ -179,50 +181,52 @@ const Content = styled.section`
 class BlogPostRoute extends React.PureComponent {
 
   render(){
-    const { markdownRemark } = this.props.data;
+    const post = this.props.data.markdownRemark;
     const { langKey } = this.props.pageContext;
-    const structuredData = getStructuredData(markdownRemark);
-    const url = `https://hugomagalhaes.com${markdownRemark.fields.slug}`;
+    const structuredData = getStructuredData(post);
+    const url = `https://hugomagalhaes.com${post.fields.slug}`;
   
     const tags = (
-      <Tags tags={markdownRemark.fields.tagSlugs} />
+      <Tags tags={post.fields.tagSlugs} />
     );
 
     return (
       <Layout location={this.props.location}>
         <Post>
           <Helmet
-            title={`${markdownRemark.frontmatter.title}`}
-            meta={[{ name: 'description', content: markdownRemark.excerpt }]}
+            title={`${post.frontmatter.title}`}
+            meta={[{ name: 'description', content: post.excerpt }]}
           />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: structuredData }}
           />
+          
           <header>
             <H1>
-              {markdownRemark.frontmatter.title}
+              {post.frontmatter.title}
             </H1>
+            <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
             {/* <Time
               pubdate="pubdate"
-              date={markdownRemark.frontmatter.date}
+              date={post.frontmatter.date}
             /> */}
           </header>
           {/* <EditBtn
-            fileAbsolutePath={markdownRemark.fileAbsolutePath}
+            fileAbsolutePath={post.fileAbsolutePath}
             currentLangKey={langKey}
           /> */}
           {/* {tags} */}
-          <Content dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-          {/* <Comments
-            shortname="hugomn-com"
-            identifier={markdownRemark.fields.slug}
-            title={markdownRemark.frontmatter.title}
+          <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Comments
+            shortname="hugomagalhes"
+            identifier={post.fields.slug}
+            title={post.frontmatter.title}
             url={url}
-          /> */}
+          />
           {/* {tags} */}
           {/* <Posts
-            posts={markdownRemark.fields.readNextPosts}
+            posts={post.fields.readNextPosts}
             langKey={langKey}
             showBtnMorePosts
             title="posts.readNext"
@@ -269,6 +273,13 @@ export const pageQuery = graphql`
         title
         tags
         date
+        image {
+          childImageSharp{
+              sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+              }
+          }
+        }
         structuredData {
           alternativeHeadline
           type

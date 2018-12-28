@@ -223,6 +223,7 @@ const theme = {
       maxWidth: '46.25rem',
       header: {
         fontSize: '2.6rem',
+        margin: `0 0 ${scale(6)}`,
         time: {
           fontSize: scale(0),
           color: colors.blue

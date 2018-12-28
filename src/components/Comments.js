@@ -12,12 +12,7 @@ class Comments extends React.PureComponent {
     category_id: PropTypes.string
   }
 
-  handleNewComment(comment) {
-    console.log(comment.text);
-  }
-
   render() {
-
     return (
       <ReactDisqusComments
         onNewComment={this.handleNewComment}
