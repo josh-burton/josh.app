@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import BigFirstLetter from './BigFirstLetter';
 
-const Wrapper = styled(BigFirstLetter)`
+const Wrapper = styled.section`
   margin-top: ${props => props.theme.welcome.marginTop};
   margin-bottom: ${props => props.theme.welcome.marginBottom};
 `;

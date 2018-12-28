@@ -46,15 +46,8 @@ const theme = {
     border: '0.4rem red solid'
   },
   p: {
-    fontSize: scale(1),
-    lineHeight: scaleN(2),
-    firstLetter: {
-      fontSize: `${(scaleN(1) * 2) + scaleN(2)}rem`,
-      color: colors.green,
-      lineHeight: 0.2,
-      padding: '1.3rem 0.1rem',
-      margin: 0
-    }
+    fontSize: scale(1.25),
+    lineHeight: 1.58,
   },
   a: {
     fontFamily: fonts.SansSerif,
@@ -225,16 +218,18 @@ const theme = {
       }
     },
     post: {
-      padding: 0,
-      margin: `0 0 ${scale(4)} 0`,
+      padding: '20px',
+      margin: `${scale(4)} auto ${scale(4)}`,
+      maxWidth: '46.25rem',
       header: {
-        fontSize: scale(5),
+        fontSize: '2.6rem',
         time: {
           fontSize: scale(0),
           color: colors.blue
         }
       },
       content: {
+        fontFamily: fonts.Serif,
         code: {
           color: colors.white,
           fontSize: scale(1),
@@ -288,7 +283,7 @@ const theme = {
         p: {
           fontSize: scale(1),
           margin: 0,
-          padding: `${scale(0)} 0 0 0`
+          padding: `2rem 0 0 0`
         },
         ul: {
           fontSize: scale(1),

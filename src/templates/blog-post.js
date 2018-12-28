@@ -9,7 +9,6 @@ import { getStructuredData } from '../structuredData';
 import CleanTime from '../components/Time';
 import Comments from '../components/Comments';
 // import Posts from '../components/Posts';
-import AnchorJS from 'anchor-js';
 import Layout from '../components/layout';
 
 const Time = styled(CleanTime)`
@@ -25,17 +24,17 @@ const Time = styled(CleanTime)`
 const Post = styled.article`
   margin: ${props => props.theme.blog.post.margin};
   padding: ${props => props.theme.blog.post.padding};
+  max-width: ${props => props.theme.blog.post.maxWidth};
 `;
 
 const H1 = styled.h1`
   padding-bottom: 0;
-  text-align: center;
   font-size: ${props => props.theme.blog.post.header.fontSize};
 `;
 
 const Content = styled.section`
   margin: 0 0 ${({ theme }) => theme.scale(6)} 0;
-
+  font-family: ${props => props.theme.blog.post.content.fontFamily};
   p > code {
     color: ${props => props.theme.blog.post.content.code.color};
     font-size: ${props => props.theme.blog.post.content.code.fontSize};
@@ -110,15 +109,6 @@ const Content = styled.section`
     line-height: ${props => props.theme.p.lineHeight};
   }
 
-  & > p:first-of-type::first-letter {
-      font-size: ${props => props.theme.p.firstLetter.fontSize};
-      color: ${props => props.theme.p.firstLetter.color};
-      float: left;
-      line-height: ${props => props.theme.p.firstLetter.lineHeight};
-      padding: ${props => props.theme.p.firstLetter.padding};
-      margin: ${props => props.theme.p.firstLetter.margin};
-  }
-
   strong{
     font-weight: bold;
   }
@@ -188,11 +178,6 @@ const Content = styled.section`
 
 class BlogPostRoute extends React.PureComponent {
 
-  componentDidMount(){
-    const anchors = new AnchorJS();
-    anchors.add('h1, h2');
-  }
-
   render(){
     const { markdownRemark } = this.props.data;
     const { langKey } = this.props.pageContext;
@@ -218,24 +203,24 @@ class BlogPostRoute extends React.PureComponent {
             <H1>
               {markdownRemark.frontmatter.title}
             </H1>
-            <Time
+            {/* <Time
               pubdate="pubdate"
               date={markdownRemark.frontmatter.date}
-            />
+            /> */}
           </header>
-          <EditBtn
+          {/* <EditBtn
             fileAbsolutePath={markdownRemark.fileAbsolutePath}
             currentLangKey={langKey}
-          />
-          {tags}
+          /> */}
+          {/* {tags} */}
           <Content dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-          <Comments
+          {/* <Comments
             shortname="hugomn-com"
             identifier={markdownRemark.fields.slug}
             title={markdownRemark.frontmatter.title}
             url={url}
-          />
-          {tags}
+          /> */}
+          {/* {tags} */}
           {/* <Posts
             posts={markdownRemark.fields.readNextPosts}
             langKey={langKey}

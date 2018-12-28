@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Hugo Nogueira <hugomn@gmail.com>",
   "dependencies": {
-    "anchor-js": "^4.1.1",
     "gatsby": "^2.0.76",
     "prismjs": "^1.15.0",
     "react": "^16.7.0",

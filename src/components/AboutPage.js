@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import H1 from './H1';
 import { getAuthor } from '../data/authors';
 import { getStructuredDataForAuthor } from '../structuredData';
-import BigFirstLetter from './BigFirstLetter';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
@@ -20,7 +19,7 @@ const AboutPage = (props) => {
 
   return (
     <Layout location={props.location}>
-      <BigFirstLetter>
+      <section>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: structuredData }}
@@ -39,7 +38,7 @@ const AboutPage = (props) => {
           )}
         </FormattedMessage>
         {props.i18n.description}
-      </BigFirstLetter>
+      </section>
     </Layout>
   );
 };
