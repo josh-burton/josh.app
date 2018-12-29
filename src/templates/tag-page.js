@@ -37,6 +37,7 @@ const AllTagsLink = styled(Link)`
 
 const TagRoute = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark.edges.map(p => p.node);
+  const { author } = data.site.siteMetadata;
 
   const allTagsLink = (
     <FormattedMessage id="tags.allTagsLink" >
@@ -70,7 +71,7 @@ const TagRoute = ({ data, pageContext, location }) => {
           {allTagsLink}
         </Header>
         <PostList
-          posts={posts}
+          posts={posts} author={author}
         />
         <footer>
           {allTagsLink}
@@ -90,6 +91,16 @@ export default TagRoute;
 
 export const pageQuery = graphql`
   query TagPage($tag: String, $langKey: String) {
+  site {
+    siteMetadata {
+      author {
+        name
+        homeCity
+        email
+        defaultLink
+      }
+    }
+  },
   allMarkdownRemark(limit: 1000,
     sort: {fields: [frontmatter___date], order: DESC},
     filter: {
@@ -106,7 +117,14 @@ export const pageQuery = graphql`
       node {
         frontmatter{
           title,
-          date
+          date,
+          image {
+            childImageSharp{
+                sizes(maxWidth: 750) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+          }
         },
         fields{
           slug

@@ -1,17 +1,27 @@
 import React from 'react';
-import Blog from './_blog';
+import Blog from '../../components/pages/Blog';
 import { graphql } from 'gatsby';
 
 export default (props) => <Blog {...props} />;
 
 export const pageQuery = graphql`
-  query BlogEnQuery {
-   allMarkdownRemark(
+  query BlogPtQuery {
+    site {
+      siteMetadata {
+        author {
+          name
+          homeCity
+          email
+          defaultLink
+        }
+      }
+    },
+    allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: { draft: { ne: true } },
-        fields: { langKey: { regex: "/(en|any)/" } }
+        fields: { langKey: { regex: "/(pt|any)/" } }
       },
     ) {
       edges {
@@ -19,7 +29,14 @@ export const pageQuery = graphql`
           frontmatter{
             title,
             tags,
-            date
+            date,
+            image {
+              childImageSharp{
+                  sizes(maxWidth: 750) {
+                      ...GatsbyImageSharpSizes
+                  }
+              }
+            }
           },
           fields{
             slug,

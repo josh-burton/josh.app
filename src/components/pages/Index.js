@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SocialLinks from './SocialLinks';
-import Welcome from './Welcome';
-import Layout from './layout';
-import Link from './Link';
-import PostList from './PostList';
+import SocialLinks from '../SocialLinks';
+import Welcome from '../Welcome';
+import Layout from '../layout';
+import Link from '../Link';
+import PostList from '../PostList';
 import { FormattedMessage } from 'react-intl';
-import H2 from './H2';
-import BtnLink from './BtnLink';
+import H2 from '../H2';
+import BtnLink from '../BtnLink';
 import styled from 'styled-components';
 
 const PostListContainer = styled.section`

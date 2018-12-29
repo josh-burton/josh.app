@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from '../components/IndexPage';
+import Index from '../components/pages/Index';
 import { graphql } from 'gatsby';
 
 export default (props) => <Index {...props} />;
@@ -31,7 +31,7 @@ export const pageQuery = graphql`
             date,
             image {
               childImageSharp{
-                  sizes(maxWidth: 630) {
+                  sizes(maxWidth: 750) {
                       ...GatsbyImageSharpSizes
                   }
               }

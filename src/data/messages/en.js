@@ -4,7 +4,7 @@ module.exports = {
   'header.subTitle': 'Engineering lead and agile manager.',
 
   'home': 'Home',
-  'about': 'About me',
+  'about': 'About',
 
   'all': 'All',
 

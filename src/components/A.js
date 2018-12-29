@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const A = styled.a`
-    font-family: ${props => props.theme.a.fontFamily};
     color: ${props => props.theme.a.color};
     text-decoration: ${props => props.theme.a.textDecoration};
     cursor: pointer;

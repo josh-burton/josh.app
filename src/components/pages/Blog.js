@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostList from '../components/PostList';
-import H1 from '../components/H1';
+import PostList from '../PostList';
+import H1 from '../H1';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
-import Layout from '../components/layout';
+import Layout from '../layout';
 
 const Blog = (props) => {
+  const { author } = props.data.site.siteMetadata;
   return (
     <Layout location={props.location}>
       <section className="posts">
@@ -24,7 +25,7 @@ const Blog = (props) => {
           )}
         </FormattedMessage>
         <PostList
-          posts={props.data.allMarkdownRemark.edges.map(p => p.node)}
+          posts={props.data.allMarkdownRemark.edges.map(p => p.node)} author={author}
         />
       </section>
     </Layout>

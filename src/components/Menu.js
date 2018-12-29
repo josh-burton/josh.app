@@ -35,7 +35,6 @@ const Nav = styled.nav`
   ${media.md`
     padding: ${props => props.theme.menu.desktop.padding};
     display: flex;
-    lex-basis: auto;
     flex-grow: 1;
     align-items: center;
     top: 0;
@@ -43,10 +42,13 @@ const Nav = styled.nav`
     left: 0;
     height: auto;
     z-index: 1030;
+    transform: none;
+    background-color: ${props => props.theme.menu.mobile.closed.bg};
   `}
 `;
 
 const MenuLabel = styled.label`
+  ${hidden.md}
   width: ${props => props.theme.menu.mobile.label.width};
   height: ${props => props.theme.menu.mobile.label.height};
   position: relative;
@@ -61,10 +63,10 @@ const MenuLabel = styled.label`
     color: ${props => props.theme.colors.darkGreen};
     transition: color 0.4s;
   }
-  ${hidden.md}
 `;
 
 const Checkbox = styled.input`
+  ${hidden.md}
   position: absolute;
   opacity: 0.02;
   cursor: pointer;
@@ -111,7 +113,7 @@ const Ul = styled.ul`
     ${media.md`
       opacity: 1;
       margin: ${props => props.theme.menu.desktop.ul.margin};
-      transform: '';
+      transform: none;
       display: flex;
       flex-direction: row;
     `}
@@ -127,6 +129,7 @@ class Menu extends React.PureComponent {
   }
 
   open = (event) => {
+    console.log('[dev:hugo] open', true);
     this.setState({
       isOpen: !this.state.isOpen
     });

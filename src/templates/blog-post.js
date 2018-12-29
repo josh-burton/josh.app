@@ -104,7 +104,7 @@ const Content = styled.section`
     font-size:${props => props.theme.blog.post.content.h6.fontSize};
   }
 
-  p{
+  p {
     margin:${props => props.theme.blog.post.content.p.margin};
     padding:${props => props.theme.blog.post.content.p.padding};
     font-size: ${props => props.theme.p.fontSize};
@@ -275,7 +275,7 @@ export const pageQuery = graphql`
         date
         image {
           childImageSharp{
-              sizes(maxWidth: 630) {
+              sizes(maxWidth: 750) {
                   ...GatsbyImageSharpSizes
               }
           }

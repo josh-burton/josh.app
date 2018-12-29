@@ -1,19 +1,11 @@
 import * as fonts from '../constants/fonts';
 
-/**
- * Round x with n decimal.
- * @param {Number} x Number to be rounded.
- * @param {Number} n Number of digits after semi column.
- * @returns {Number} Number rounded.
- */
 const round = (x, n) => Math.round(x * (n * 10)) / (n * 10);
-
 const scaleN = (n) => round(Math.pow(1.2, n), 3);
-
 const scale = n => `${scaleN(n)}rem`;
 
 const colors = {
-  white: 'rgba(250,250,250,1)',
+  white: '#FFFFFF',
   black: '#212529', 
   yellow: '#E2C044',
   red: '#FF0000',
@@ -50,7 +42,6 @@ const theme = {
     lineHeight: 1.58,
   },
   a: {
-    fontFamily: fonts.SansSerif,
     color: colors.green,
     textDecoration: 'none',
     hover: {
@@ -162,13 +153,13 @@ const theme = {
     fontSize: scale(6),
     padding: `${scale(1)} 0 0 0`,
     margin: `${scale(4)} 0 0 0`,
-    textAlign: 'center'
+    textAlign: 'left'
   },
   h2: {
     fontSize: scale(4),
     padding: `${scale(1)} 0 0 0`,
     margin: `${scale(4)} 0 0 0`,
-    textAlign: 'center'
+    textAlign: 'left'
   },
   blog: {
     list: {
@@ -292,6 +283,24 @@ const theme = {
           padding: `${scale(0)}`
         }
       }
+    }
+  },
+  page: {
+    padding: '20px',
+    margin: `${scale(4)} auto ${scale(4)}`,
+    maxWidth: '60rem',
+    header: {
+      fontFamily: fonts.Serif,
+      fontSize: '2.4rem',
+      margin: `0 0 ${scale(2)}`,
+    },
+    content: {
+      fontFamily: fonts.Serif,
+      p: {
+        fontSize: scale(1),
+        margin: 0,
+        padding: `2rem 0 0 0`
+      },
     }
   },
   i18n: {

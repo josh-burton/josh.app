@@ -22,19 +22,6 @@ const messages = { en, pt };
 
 addLocaleData([...enData, ...ptData]);
 
-const BodyContainer = styled.div`
-  font-family: ${props => props.theme.fonts.SansSerif};
-  color: ${props => props.theme.color};
-  background-color: ${props => props.theme.bg};
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  min-height: 100%;
-  overflow-x: hidden;
-  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-`;
-
 const Layout = (props) => {
   const { children, location } = props;
   const url = location.pathname;
@@ -74,6 +61,31 @@ const Layout = (props) => {
     </ThemeProvider>
   );
 };
+
+const BodyContainer = styled.div`
+  font-family: ${props => props.theme.fonts.SansSerif};
+  color: ${props => props.theme.color};
+  background-color: ${props => props.theme.bg};
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+  a {
+    color: ${props => props.theme.a.color};
+    text-decoration: ${props => props.theme.a.textDecoration};
+    transition: all 0.2s;
+    :hover {
+      transition: all 0.2s;
+      color: ${props => props.theme.a.hover.color};
+    }
+  }
+  b, strong {
+    font-weight: bold;
+  } 
+`;
 
 export default props => (
   <StaticQuery

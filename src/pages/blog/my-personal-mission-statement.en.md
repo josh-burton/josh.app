@@ -1,7 +1,7 @@
 ---
 title: My personal mission statement
 date: '2017-08-08'
-layout: post
+layout: page
 draft: false
 featured: true
 tags: 
