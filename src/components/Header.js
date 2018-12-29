@@ -4,7 +4,6 @@ import Link from './Link';
 import Helmet from 'react-helmet';
 import Menu from './Menu';
 import styled from 'styled-components';
-import SelectLanguage from './SelectLanguage';
 import { FormattedMessage } from 'react-intl';
 
 const headerTheme = (theme, isHome) =>
@@ -57,7 +56,7 @@ const Wrapper = styled.header`
   `}  
 `;
 
-const Header = ({ menu, isHome, langs, homeLink, url }) => {
+const Header = ({ menu, isHome, homeLink, url }) => {
   return (
     <Wrapper isHome={isHome}>
       <FormattedMessage id="title">
@@ -68,7 +67,7 @@ const Header = ({ menu, isHome, langs, homeLink, url }) => {
           />
         )}
       </FormattedMessage>
-      {/* <SelectLanguage langs={langs} className="select-languages" /> */}
+      {/* */}
       {/* <FormattedMessage id="header.title">
         {(title) => (
           <Title to={homeLink} isHome={isHome} className="title">
@@ -89,7 +88,6 @@ const Header = ({ menu, isHome, langs, homeLink, url }) => {
 Header.propTypes = {
   menu: PropTypes.array.isRequired,
   isHome: PropTypes.bool,
-  langs: PropTypes.array,
   homeLink: PropTypes.string,
   url: PropTypes.string
 };

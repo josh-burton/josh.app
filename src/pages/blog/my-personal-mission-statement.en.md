@@ -1,6 +1,6 @@
 ---
 title: My personal mission statement
-date: '2017-08-08'
+date: '2018-08-01'
 layout: page
 draft: false
 featured: true

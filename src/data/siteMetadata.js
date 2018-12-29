@@ -11,11 +11,10 @@ module.exports = {
   sourceCodeLink: 'https://github.com/hugomn/hugomagalhaes.com',
   menu: [
     {label: 'home', slug: '/'},
-    {label: 'posts', slug: '/blog/'},
-    {label: 'tags', slug: '/tags/'},
+    {label: 'blog', slug: '/blog/'},
     {label: 'about', slug: '/about/'},
-    {label: 'sourceCode', link: 'https://github.com/hugomn/hugomagalhaes.com'},
-    {label: 'contact', slug: '/contact/'}
+    {label: 'contact', slug: '/contact/'},
+    {label: 'call', link: 'http://call.hugomagalhaes.com/'},
   ],  
   languages,
   contact: [

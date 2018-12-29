@@ -7,13 +7,14 @@ import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import Layout from '../layout';
 
-const Page = styled.article`
+const Wrapper = styled.article`
   margin: ${props => props.theme.page.margin};
   padding: ${props => props.theme.page.padding};
   max-width: ${props => props.theme.page.maxWidth};
 `;
 
 const Header = styled.header`
+  font-family: ${props => props.theme.page.header.fontFamily};
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   margin: ${props => props.theme.page.header.margin};
 `;
@@ -38,14 +39,14 @@ const H1 = styled.h1`
   }
 `;
 
-const About = (props) => {
+const Page = (props) => {
   const author = getAuthor('hugomn');
   author.description = props.i18n.description;
   const structuredData = getStructuredDataForAuthor(author);
 
   return (
     <Layout location={props.location}>
-      <Page>
+      <Wrapper>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: structuredData }}
@@ -66,12 +67,12 @@ const About = (props) => {
         <Content>
           { props.i18n.content }
         </Content>
-      </Page>
+      </Wrapper>
     </Layout>
   );
 };
 
-About.propTypes = {
+Page.propTypes = {
   i18n: PropTypes.shape({
     titleId: PropTypes.string.isRequired,
     content: PropTypes.object.isRequired,
@@ -80,4 +81,4 @@ About.propTypes = {
   location: PropTypes.object.isRequired
 };
 
-export default About;
+export default Page;

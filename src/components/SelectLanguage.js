@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Br from './flags/Br';
 import Us from './flags/Us';
-import { InvisibleSpan } from '../components/Invisible';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Nav = styled.nav`
-  margin-right: ${({ theme }) => theme.scale(8)};
 `;
 
 const Ul = styled.ul`
@@ -49,10 +47,7 @@ const SelectLanguage = (props) => {
   );
 
   return (
-    <Nav {...props}>
-      <header>
-        <InvisibleSpan>Select your language:</InvisibleSpan>
-      </header>
+    <Nav>
       <Ul>
         {links}
       </Ul>

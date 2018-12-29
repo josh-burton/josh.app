@@ -78,6 +78,7 @@ const Checkbox = styled.input`
 
 const MenuLink = styled(Link)`
     font-size: ${props => props.theme.menu.mobile.a.fontSize};
+    font-family: ${props => props.theme.menu.mobile.a.fontFamily};
     padding: ${props => props.theme.menu.mobile.a.padding};
     display: block;
     text-align: ${props => props.theme.menu.mobile.a.textAlign};

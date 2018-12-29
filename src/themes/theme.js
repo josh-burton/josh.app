@@ -13,6 +13,7 @@ const colors = {
   blue: '#85B9BF',
   green: '#00ab6b',
   darkGreen: '#038252',
+  lightGreen: '#00ab6b2e',
   gray: '#343a40',
   darkGray: '#1d2124',
   lightGray: 'rgba(0, 0, 0, 0.44)',
@@ -29,7 +30,7 @@ const theme = {
   fonts,
   color: colors.black,
   bg: colors.white,
-  padding: `4rem ${scaleN(1)}rem ${scaleN(10)}rem ${scaleN(0)}rem`,
+  padding: `4rem ${scaleN(1)}rem ${scaleN(4)}rem ${scaleN(0)}rem`,
   margin: '0 auto',
   maxWidth: '71.25rem',
   borderRadius: '0.2rem',
@@ -93,7 +94,8 @@ const theme = {
         fontSize: scale(3.2)
       },
       a: {
-        fontSize: scale(1),
+        fontFamily: fonts.SansSerif,
+        fontSize: scale(1.5),
         padding: `0 0 ${scale(1)}`,
         textAlign: 'left',
         color: colors.white,
@@ -210,9 +212,10 @@ const theme = {
     },
     post: {
       padding: '20px',
-      margin: `${scale(4)} auto ${scale(4)}`,
+      margin: `${scale(4)} auto 0`,
       maxWidth: '46.25rem',
       header: {
+        fontFamily: fonts.SansSerif,
         fontSize: '2.6rem',
         margin: `0 0 ${scale(6)}`,
         time: {
@@ -287,10 +290,10 @@ const theme = {
   },
   page: {
     padding: '20px',
-    margin: `${scale(4)} auto ${scale(4)}`,
+    margin: `${scale(0)} auto ${scale(4)}`,
     maxWidth: '60rem',
     header: {
-      fontFamily: fonts.Serif,
+      fontFamily: fonts.SansSerif,
       fontSize: '2.4rem',
       margin: `0 0 ${scale(2)}`,
     },
@@ -306,12 +309,12 @@ const theme = {
   i18n: {
     selectLanguage: {
       li: {
-        margin: `-${scale(0)} 0 0 0`,
-        padding: `${scale(5)} ${scale(-2)} ${scale(-5)} ${scale(-2)}`,
+        margin: `0 0 0 5px`,
+        padding: `${scale(-8)} ${scale(-2)} ${scale(-5)} ${scale(-2)}`,
         fontSize: scale(3),
         borderRadius: '0.2rem',
         selected: {
-          backgroundColor: colors.gray
+          backgroundColor: colors.lightGreen
         }
       }
     }

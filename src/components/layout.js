@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FixedContainer from '../components/FixedContainer';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import en from '../data/messages/en';
@@ -41,7 +41,6 @@ const Layout = (props) => {
         <BodyContainer>
           <Header
             isHome={isHome}
-            langs={langsMenu}
             homeLink={homeLink}
             url={url}
             menu={menu}
@@ -51,28 +50,19 @@ const Layout = (props) => {
               {children}
             </main>
           </FixedContainer>
-          {/* <Footer
-            currentLangKey={langKey}
+          <Footer
             author={author}
+            langs={langsMenu}
             sourceCodeLink={sourceCodeLink}
-          /> */}
+          />
+          <GlobalStyle />
         </BodyContainer>
       </IntlProvider>
     </ThemeProvider>
   );
 };
 
-const BodyContainer = styled.div`
-  font-family: ${props => props.theme.fonts.SansSerif};
-  color: ${props => props.theme.color};
-  background-color: ${props => props.theme.bg};
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  min-height: 100%;
-  overflow-x: hidden;
-  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.a.color};
     text-decoration: ${props => props.theme.a.textDecoration};
@@ -85,6 +75,19 @@ const BodyContainer = styled.div`
   b, strong {
     font-weight: bold;
   } 
+`;
+
+const BodyContainer = styled.div`
+  font-family: ${props => props.theme.fonts.System};
+  color: ${props => props.theme.color};
+  background-color: ${props => props.theme.bg};
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
 `;
 
 export default props => (

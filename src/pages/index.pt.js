@@ -6,6 +6,16 @@ export default (props) => <Index {...props} />;
 
 export const pageQuery = graphql`
   query IndexPtQuery {
+    site {
+      siteMetadata {
+        author {
+          name
+          homeCity
+          email
+          defaultLink
+        }
+      }
+    },
     allMarkdownRemark(
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }

@@ -30,6 +30,7 @@ const Post = styled.article`
 
 const H1 = styled.h1`
   padding-bottom: 0;
+  font-family: ${props => props.theme.blog.post.header.fontFamily};
   margin: ${props => props.theme.blog.post.header.margin};
   font-size: ${props => props.theme.blog.post.header.fontSize};
 `;

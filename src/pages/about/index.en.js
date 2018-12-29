@@ -1,5 +1,5 @@
 import React from 'react';
-import Page from '../../components/pages/About';
+import Page from '../../components/pages/Page';
 
 const i18n = {
   titleId: 'about',
