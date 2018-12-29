@@ -4,8 +4,8 @@
 <url> <loc>https://hugomagalhaes.com/pt/blog/my-personal-mission-statement/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/en/blog/var-let-or-const/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/pt/blog/var-let-or-const/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hugomagalhaes.com/pt/blog/how-to-develop-reusable-components-with-babel-and-rollupjs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/en/blog/how-to-develop-reusable-components-with-babel-and-rollupjs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hugomagalhaes.com/pt/blog/how-to-develop-reusable-components-with-babel-and-rollupjs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/en/tags/personal/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/en/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hugomagalhaes.com/en/tags/rollup-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
