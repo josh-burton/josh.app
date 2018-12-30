@@ -1,11 +1,12 @@
-// var ghpages = require('gh-pages');
+var ghpages = require('gh-pages');
 
-// ghpages.publish('public', {
-//   branch: 'master',
-//   repo: 'git@github.com:hugomn/hugomn.github.io.git',
-//   user: {
-//     name: 'Hugo Nogueira',
-//     email: 'hugomn@gmail.com'
-//   }
-// });
-console.log('testing node output');
+console.log('Starting github pages deploy...');
+ 
+ghpages.publish('public', {
+  branch: 'master',
+  repo: 'git@github.com:hugomn/hugomn.github.io.git',
+  user: {
+    name: 'Hugo Nogueira',
+    email: 'hugomn@gmail.com'
+  }
+}, function(err) { console.log('Error: ' + err); });
