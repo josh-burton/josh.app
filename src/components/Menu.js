@@ -130,7 +130,6 @@ class Menu extends React.PureComponent {
   }
 
   open = (event) => {
-    console.log('[dev:hugo] open', true);
     this.setState({
       isOpen: !this.state.isOpen
     });

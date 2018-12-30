@@ -74,9 +74,9 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
           </span>
         </Cell>
         <MiddleCell middle>
-          <Link href={sourceCodeLink} target="_blank">
+          <a href={sourceCodeLink} target="_blank">
             <GithubIcon />
-          </Link>
+          </a>
         </MiddleCell>
         <RightCell middle>
           <SelectLanguage langs={langs} className="select-languages" /> 
