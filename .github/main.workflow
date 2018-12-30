@@ -1,6 +1,6 @@
 workflow "Build gatsby and deploy to github pages" {
   on = "push"
-  resolves = ["Gatsby build and deploy to docs folder"]
+  resolves = ["Gatsby deploy"]
 }
 
 action "npm install" {
