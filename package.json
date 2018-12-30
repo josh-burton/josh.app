@@ -21,7 +21,7 @@
     "prestart": "npm run lint",
     "start": "npm run develop",
     "lint": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
-    "build": "rm -rf public/*.html && gatsby build",
+    "build": "rm -rf public/*.html && gatsby build && rm -rf docs && mv public docs",
     "predeploy": "npm run lint && npm run build && rm ./public/*.js.map",
     "deploy-surge": "surge public/ https://hugomagalhaes.com",
     "deploy": "gh-pages -d public --branch master",
