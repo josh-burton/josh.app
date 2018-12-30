@@ -4,7 +4,7 @@ console.log('Starting github pages deploy...');
  
 ghpages.publish('public', {
   branch: 'master',
-  repo: 'git@github.com:hugomn/hugomn.github.io.git',
+  dest: 'docs',
   user: {
     name: 'Hugo Nogueira',
     email: 'hugomn@gmail.com'
