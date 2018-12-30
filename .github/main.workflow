@@ -11,5 +11,5 @@ action "npm install" {
 action "Gatsby build and deploy to docs folder" {
   uses = "actions/npm@e7aaefe"
   needs = ["npm install"]
-  args = "build"
+  args = "run build"
 }
