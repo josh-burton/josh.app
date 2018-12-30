@@ -130,18 +130,13 @@ const theme = {
     },
   },
   socialLinks: {
-    margin: `0 ${scale(0)}`,
+    margin: `0`,
     padding: 0,
     a: {
       color: colors.black,
-      fontSize: scale(-1),
-      margin: 0,
-      padding: `${scale(0)} ${scale(0)} 0 ${scale(0)}`,
-      svg: {
-        fontSize: scale(5),
-        margin: `0 auto ${scale(-4)} auto`,
-        padding: 0,
-      },
+      fontSize: scale(2.5),
+      margin: `0 0 ${scale(0)}`,
+      padding: `0`,
       hover: {
         color: colors.green
       }

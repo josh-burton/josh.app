@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SocialLinks from '../SocialLinks';
 import Welcome from '../Welcome';
 import Layout from '../layout';
 import Link from '../Link';
@@ -22,7 +21,6 @@ const Index = (props) => {
   return (
     <Layout location={props.location}>
       <div>
-        {/* <SocialLinks /> */}
         {/* <Welcome currentLangKey={langKey} /> */}
         <PostListContainer>
           {/* <header>

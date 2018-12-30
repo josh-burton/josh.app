@@ -11,6 +11,7 @@ import Comments from '../components/Comments';
 // import Posts from '../components/Posts';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
+import ShareWidget from '../components/ShareWidget';
 
 const Time = styled(CleanTime)`
   text-align: center;
@@ -225,6 +226,7 @@ class BlogPostRoute extends React.PureComponent {
             title={post.frontmatter.title}
             url={url}
           />
+          <ShareWidget url={url} message={post.excerpt} />
           {/* {tags} */}
           {/* <Posts
             posts={post.fields.readNextPosts}
