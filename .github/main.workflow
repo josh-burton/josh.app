@@ -8,8 +8,8 @@ action "npm install" {
   args = "install"
 }
 
-action "Gatsby build and deploy to docs folder" {
+action "Gatsby deploy" {
   uses = "actions/npm@e7aaefe"
   needs = ["npm install"]
-  args = "run build"
+  args = "run deploy"
 }

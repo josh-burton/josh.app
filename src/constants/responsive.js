@@ -33,7 +33,3 @@ export const hidden = Object.keys(breakpoints).reduce((accumulator, label) => {
     `;
   return accumulator;
 }, {});
-
-export const only = {
-  
-} 

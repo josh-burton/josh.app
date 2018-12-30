@@ -7,5 +7,6 @@ deploy.db
 assets/sass/bower_components/
 .build/
 public/
+docs/
 .intermediate-representation/
 .cache/
