@@ -12,4 +12,5 @@ action "Gatsby deploy" {
   uses = "actions/npm@e7aaefe"
   needs = ["npm install"]
   args = "run deploy"
+  secrets = ["GITHUB_TOKEN", "NODE_DEBUG"]
 }
