@@ -6,12 +6,13 @@ module.exports = {
     name: 'Hugo Nogueira',
     homeCity: 'Berlin',
     email: 'hugomn@gmail.com',
+    twitter: 'hugomn',
     defaultLink: 'https://github.com/hugomn'
   },
   sourceCodeLink: 'https://github.com/hugomn/hugomagalhaes.com',
   menu: [
     {label: 'home', slug: '/'},
-    {label: 'blog', slug: '/blog/'},
+    // {label: 'blog', slug: '/blog/'},
     {label: 'about', slug: '/about/'},
     {label: 'contact', slug: '/contact/'},
     {label: 'call', link: 'http://call.hugomagalhaes.com/'},

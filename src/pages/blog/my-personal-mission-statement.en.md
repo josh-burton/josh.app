@@ -6,12 +6,9 @@ draft: false
 featured: true
 tags: 
   - personal
+  - development
 image: ./images/20180801.jpg
 lang: en
-readNext:
-    - /en/blog/js/spred-operator/
-    - /en/blog/vim/vim-help-commands/
-    - /en/blog/terminal/install-zsh/
 structuredData:
   alternativeHeadline: '...'  
   locationCreated: Barueri BR

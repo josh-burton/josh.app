@@ -6,22 +6,12 @@ import styled from 'styled-components';
 import EditBtn from '../components/EditBtn';
 import Tags from '../components/Tags';
 import { getStructuredData } from '../structuredData';
-import CleanTime from '../components/Time';
 import Comments from '../components/Comments';
-// import Posts from '../components/Posts';
+import PostCardList from '../components/PostCardList';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
 import ShareWidget from '../components/ShareWidget';
-
-const Time = styled(CleanTime)`
-  text-align: center;
-  font-size: ${props => props.theme.blog.post.header.time.fontSize};
-  font-weight: bold;
-  color: ${props => props.theme.blog.post.header.time.color};
-  width: 100%;
-  display: block;
-  padding-top: 1rem;
-`;
+import PostAuthor from '../components/PostAuthor';
 
 const Post = styled.article`
   margin: ${props => props.theme.blog.post.margin};
@@ -115,14 +105,20 @@ const Content = styled.section`
   }
 `;
 
+const Author = styled(PostAuthor)`
+  padding: ${({ theme }) => `0 0 ${theme.scale(3.2)}`};
+`;
+
 class BlogPostRoute extends React.PureComponent {
 
-  render(){
+  render() {
     const post = this.props.data.markdownRemark;
     const { langKey } = this.props.pageContext;
     const structuredData = getStructuredData(post);
-    const url = `https://hugomagalhaes.com${post.fields.slug}`;
-  
+    const { author, siteUrl } = this.props.data.site.siteMetadata;
+    const url = `${siteUrl}${post.fields.slug}`;
+    console.log('[dev:hugo] post.fields.tagSlugs', post.fields.tagSlugs[0]);
+
     const tags = (
       <Tags tags={post.fields.tagSlugs} />
     );
@@ -138,11 +134,12 @@ class BlogPostRoute extends React.PureComponent {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: structuredData }}
           />
-          
+
           <header>
             <H1>
               {post.frontmatter.title}
             </H1>
+            <Author author={author} date={post.frontmatter.date} showFollow />
             <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
             {/* <Time
               pubdate="pubdate"
@@ -163,7 +160,7 @@ class BlogPostRoute extends React.PureComponent {
           />
           <ShareWidget url={url} message={post.excerpt} />
           {/* {tags} */}
-          {/* <Posts
+          {/* <PostCardList
             posts={post.fields.readNextPosts}
             langKey={langKey}
             showBtnMorePosts
@@ -195,17 +192,6 @@ export const pageQuery = graphql`
           link
         }
         slug        
-        readNextPosts {
-          excerpt
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-            langKey
-          }
-        }
       }      
       frontmatter {
         title
@@ -258,6 +244,16 @@ export const pageQuery = graphql`
           thumbnailUrl
           version
           video
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
+        author {
+          name
+          email
+          twitter
         }
       }
     }

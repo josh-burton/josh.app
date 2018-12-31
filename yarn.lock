@@ -5963,16 +5963,6 @@ gatsby-plugin-google-analytics@^2.0.8:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-i18n-readnext@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-readnext/-/gatsby-plugin-i18n-readnext-0.0.4.tgz#353ba7edb581efed3e80270b2d34e47eb29cd662"
-  integrity sha512-bo6dcwYilf5swQf1lXF+S6WrJIzmYWjhLz/YHzMLW2vU2neXXRuyEXbefZCmYzZGcApbrQtbe5ibeStVoj/FcA==
-  dependencies:
-    bluebird "^3.5.0"
-    ptz-i18n "^0.1.0"
-    ptz-math "^1.1.0"
-    ramda "^0.24.1"
-
 gatsby-plugin-i18n-tags@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n-tags/-/gatsby-plugin-i18n-tags-0.0.4.tgz#9c362c0e62ef2bc1ec42a2e14d3539489a36195b"
@@ -11317,13 +11307,6 @@ ptz-i18n@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/ptz-i18n/-/ptz-i18n-0.0.6.tgz#56c96b73d4befb10118d4573f4659d0a7a67100c"
   integrity sha512-abNOXsiS52iKc6ePIOo3kYuUviTWnuBjlaUM95zonz4j+9DgGIBv60/AiyqvbwQzxqKZOqQ/KoX9g8xPg5cXNA==
-  dependencies:
-    ramda "^0.24.1"
-
-ptz-i18n@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/ptz-i18n/-/ptz-i18n-0.1.2.tgz#0aea423ca0a4f301278b4584b046bb3ae8c05c7e"
-  integrity sha512-SgFyHZHiCoVNoezCZbmr5AKfM+26q3a1Tdcm3Du+85xmNj3GpgcQ9i6/n4VwRtqDExcl4zPYI1LhplCkh7+01A==
   dependencies:
     ramda "^0.24.1"
 

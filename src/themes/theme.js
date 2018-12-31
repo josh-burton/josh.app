@@ -177,6 +177,14 @@ const theme = {
     padding: `${scale(4)} 0 0 0`
   },
   blog: {
+    author: {
+      fontFamily: fonts.System,
+      fontSize: scale(-0.7),
+      lineHeight: scaleN(2),
+      time: {
+        color: colors.lightGray
+      }
+    },
     list: {
       margin: `${scale(4)} 0 0 0`,
       header: {
@@ -212,15 +220,6 @@ const theme = {
           padding: `0`,
           margin: `0`,
         },
-        footer: {
-          padding: `${scale(-1.5)} ${scale(1.2)} ${scale(0)}`,
-          fontFamily: fonts.System,
-          lineHeight: scaleN(2),
-          fontSize: scale(-1.3),
-          time: {
-            color: colors.lightGray
-          }
-        },
       }
     },
     post: {
@@ -230,11 +229,7 @@ const theme = {
       header: {
         fontFamily: fonts.SansSerif,
         fontSize: '2.6rem',
-        margin: `0 0 ${scale(6)}`,
-        time: {
-          fontSize: scale(0),
-          color: colors.blue
-        }
+        margin: `0 0 ${scale(4)}`,
       },
       content: {
         fontFamily: fonts.Serif,

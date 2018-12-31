@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../components/Link';
+import Link from './Link';
 import styled from 'styled-components';
-import Time from '../components/Time';
 import { Grid, Cell } from 'styled-css-grid';
-import Gravatar from 'react-gravatar';
 import Img from 'gatsby-image';
+import Author from './PostAuthor';
 
 const GridContainer = styled(Grid)`
   border: ${props => props.theme.blog.list.item.border};
@@ -18,10 +17,12 @@ const Body = styled(Cell)`
 `;
 
 const Footer = styled(Cell)`
-  font-family: ${props => props.theme.blog.list.item.footer.fontFamily};
-  font-size: ${props => props.theme.blog.list.item.footer.fontSize};
-  padding: ${props => props.theme.blog.list.item.footer.padding};
-  line-height: ${props => props.theme.blog.list.item.footer.lineHeight};
+  font-family: ${props => props.theme.blog.author.fontFamily};
+  font-size: ${props => props.theme.blog.author.fontSize};
+  padding: ${({ theme }) => `${theme.scale(-1.5)} ${theme.scale(1.2)} ${theme.scale(0)}`};
+  line-height: ${props => props.theme.blog.author.lineHeight};
+  height: auto;
+  position: relative;
 `;
 
 const Title = styled.h2`
@@ -48,21 +49,13 @@ const Text = styled.p`
   line-height: ${props => props.theme.blog.list.item.text.lineHeight};
 `;
 
-const ProfilePicture = styled(Gravatar)`
-  display: block;
-  border-radius: 50%;
+const Label = styled.div`
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
 `;
 
-const Author = styled.span`
-
-`;
-
-const Date = styled(Time)`
-  color: ${props => props.theme.blog.list.item.footer.time.color};
-  display: block;
-`;
-
-const Post = ({ post, author }) => {
+const PostCard = ({ post, author }) => {
   return (
     <GridContainer columns={1} rows={'auto 1fr auto'}>
       <Cell>
@@ -79,29 +72,18 @@ const Post = ({ post, author }) => {
         <Text>{post.excerpt}</Text>
       </Body>
       <Footer>
-        <Grid columns={'50px 1fr 25px'}>
-          <Cell middle>
-            <ProfilePicture email={author.email} alt={author.name} width={40} height={40} />
-          </Cell>
-          <Cell middle>
-            <Author>{ author.name }</Author>
-            <Date
-              pubdate="pubdate"
-              date={post.frontmatter.date}
-            />
-          </Cell>
-          <Cell center middle>
-            <Link to={post.fields.slug}>
-              <svg width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fillRule="evenodd" /></svg>
-            </Link>
-          </Cell>
-        </Grid>
+        <Author author={author} date={post.frontmatter.date} />
+        <Label>
+          <Link to={post.fields.slug}>
+            <svg width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fillRule="evenodd" /></svg>
+          </Link>
+        </Label>
       </Footer>
     </GridContainer>
   );
 };
 
-Post.propTypes = {
+PostCard.propTypes = {
   post: PropTypes.shape({
     fields: PropTypes.shape({
       slug: PropTypes.string.isRequired,
@@ -116,4 +98,4 @@ Post.propTypes = {
   author: PropTypes.object.isRequired
 };
 
-export default Post;
+export default PostCard;

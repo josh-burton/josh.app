@@ -31,6 +31,7 @@ const Content = styled.section`
 
 const H1 = styled.h1`
   font-size: ${props => props.theme.page.header.fontSize};
+  padding: 0;
   span {
     border-bottom: 1px solid rgba(0, 0, 0, 0.44);
     display: inline-block;

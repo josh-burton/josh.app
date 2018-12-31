@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Post from './Post';
+import PostCard from './PostCard';
 import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 
@@ -10,7 +10,8 @@ const Ul = styled.ul`
   padding: ${props => props.theme.blog.list.ul.padding};
 `;
 
-const PostList = (props) => {
+const PostCardList = (props) => {
+  console.log('[dev:hugo] props', props);
   return (
     <nav>
       {/* <Ul>
@@ -21,7 +22,7 @@ const PostList = (props) => {
       <Grid columns="repeat(auto-fit,minmax(360px,1fr))" gap="30px" alignContent="stretch">
         {props.posts.map(post =>
           <Cell key={post.fields.slug}>
-            <Post post={post} author={props.author} />
+            <PostCard post={post} author={props.author} />
           </Cell>
         )}
       </Grid>
@@ -29,9 +30,9 @@ const PostList = (props) => {
   );
 };
 
-PostList.propTypes = {
+PostCardList.propTypes = {
   posts: PropTypes.array.isRequired,
   author: PropTypes.object.isRequired
 };
 
-export default PostList;
+export default PostCardList;

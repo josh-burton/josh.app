@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
-import PostList from '../components/PostList';
+import PostCardList from '../components/PostCardList';
 import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
@@ -70,7 +70,7 @@ const TagRoute = ({ data, pageContext, location }) => {
           <TagName>“{pageContext.tag}”</TagName>
           {allTagsLink}
         </Header>
-        <PostList
+        <PostCardList
           posts={posts} author={author}
         />
         <footer>

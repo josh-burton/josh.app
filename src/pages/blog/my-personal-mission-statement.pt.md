@@ -1,15 +1,11 @@
 ---
-title: Primeiro post
+title: Declaração de missão pessoal
 date: '2018-08-01'
 layout: post
 draft: false
 tags:
   - Testando
 image: ./images/20180801.jpg
-readNext:
-    - /en/blog/js/spred-operator/
-    - /en/blog/vim/vim-help-commands/
-    - /en/blog/terminal/install-zsh/
 structuredData:
   alternativeHeadline: ...  
   locationCreated: Barueri BR

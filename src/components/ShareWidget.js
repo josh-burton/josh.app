@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FacebookIcon from 'react-icons/lib/fa/facebook-square';
+import FacebookIcon from 'react-icons/lib/fa/facebook';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GoogleIcon from 'react-icons/lib/fa/google-plus';
 import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
@@ -40,7 +40,7 @@ const A = styled.a`
 const Wrapper = styled.section`
   position: fixed;
   top: 0;
-  transform: translateY(230px) translateX(-80px);
+  transform: translateY(230px) translateX(-100px);
   ${visible.lg}
 `;
 

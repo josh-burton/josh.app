@@ -99,12 +99,6 @@ module.exports = {
         langKeyForNull: 'any'
       }
     },
-    {
-      resolve: 'gatsby-plugin-i18n-readnext',
-      options: { // Default options
-        nPosts: 3
-      }
-    },
     'gatsby-plugin-styled-components'
   ],
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostList from '../PostList';
+import PostCardList from '../PostCardList';
 import H1 from '../H1';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
@@ -24,7 +24,7 @@ const Blog = (props) => {
             </header>
           )}
         </FormattedMessage>
-        <PostList
+        <PostCardList
           posts={props.data.allMarkdownRemark.edges.map(p => p.node)} author={author}
         />
       </section>
