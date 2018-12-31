@@ -41,7 +41,6 @@ const FollowButton = styled.a`
 `;
 
 const PostAuthor = ({ author, className, date, showFollow, timeToRead }) => {
-  console.log('[dev:hugo] timeToRead', timeToRead);
   return (
     <Wrapper columns={'50px 1fr'} className={className}>
       <Cell middle>
