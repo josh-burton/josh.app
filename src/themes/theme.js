@@ -147,16 +147,34 @@ const theme = {
     marginBottom: scale(2),
   },
   h1: {
-    fontSize: scale(6),
-    padding: `${scale(1)} 0 0 0`,
-    margin: `${scale(4)} 0 0 0`,
-    textAlign: 'left'
+    fontSize: scale(5.8),
+    margin: 0,
+    padding: `${scale(8)} 0 0 0`
   },
   h2: {
-    fontSize: scale(4),
-    padding: `${scale(1)} 0 0 0`,
-    margin: `${scale(4)} 0 0 0`,
-    textAlign: 'left'
+    fontSize: scale(3.8),
+    margin: 0,
+    padding: `${scale(8)} 0 0 0`
+  },
+  h3: {
+    fontSize: scale(3),
+    margin: 0,
+    padding: `${scale(6)} 0 0 0`
+  },
+  h4: {
+    fontSize: scale(2),
+    margin: 0,
+    padding: `${scale(6)} 0 0 0`
+  },
+  h5: {
+    fontSize: scale(1),
+    margin: 0,
+    padding: `${scale(4)} 0 0 0`
+  },
+  h6: {
+    fontSize: scale(1),
+    margin: 0,
+    padding: `${scale(4)} 0 0 0`
   },
   blog: {
     list: {
@@ -239,36 +257,6 @@ const theme = {
         },
         a: {
           color: colors.green
-        },
-        h1: {
-          fontSize: scale(4),
-          margin: 0,
-          padding: `${scale(4)} 0 0 0`
-        },
-        h2: {
-          fontSize: scale(3),
-          margin: 0,
-          padding: `${scale(3)} 0 0 0`
-        },
-        h3: {
-          fontSize: scale(2),
-          margin: 0,
-          padding: `${scale(2)} 0 0 0`
-        },
-        h4: {
-          fontSize: scale(1),
-          margin: 0,
-          padding: `${scale(1)} 0 0 0`
-        },
-        h5: {
-          fontSize: scale(0),
-          margin: 0,
-          padding: `${scale(0)} 0 0 0`
-        },
-        h6: {
-          fontSize: scale(-1),
-          margin: 0,
-          padding: `${scale(0)} 0 0 0`
         },
         p: {
           fontSize: scale(1),

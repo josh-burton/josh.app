@@ -74,7 +74,41 @@ const GlobalStyle = createGlobalStyle`
   }
   b, strong {
     font-weight: bold;
-  } 
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${props => props.theme.fonts.SansSerif};
+  }
+  h1{
+    margin:${props => props.theme.h1.margin};
+    padding:${props => props.theme.h1.padding};
+    font-size:${props => props.theme.h1.fontSize};
+    line-height: 1.2;
+  }
+  h2{
+    margin:${props => props.theme.h2.margin};
+    padding:${props => props.theme.h2.padding};
+    font-size:${props => props.theme.h2.fontSize};
+  }
+  h3{
+    margin:${props => props.theme.h3.margin};
+    padding:${props => props.theme.h3.padding};
+    font-size:${props => props.theme.h3.fontSize};
+  }
+  h4{
+    margin:${props => props.theme.h4.margin};
+    padding:${props => props.theme.h4.padding};
+    font-size:${props => props.theme.h4.fontSize};
+  }
+  h5{
+    margin:${props => props.theme.h5.margin};
+    padding:${props => props.theme.h5.padding};
+    font-size:${props => props.theme.h5.fontSize};
+  }
+  h6{
+    margin:${props => props.theme.h6.margin};
+    padding:${props => props.theme.h6.padding};
+    font-size:${props => props.theme.h6.fontSize};
+  }
 `;
 
 const BodyContainer = styled.div`

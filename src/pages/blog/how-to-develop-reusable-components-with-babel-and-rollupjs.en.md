@@ -28,7 +28,24 @@ A basic principle for creating independent and reusable components is that they 
 
 Initially, immediately executed functions (IIFE) and the "Revelling module" standard for components creation were used, as in the following example:
 
-<script src="https://gist.github.com/hugomn/0324b8515dddff5c4c30b18d581a1021.js"></script>
+```javascript
+var myRevealingModule = (function () {
+        var privateName;
+ 
+        function privateDisplay() {
+            console.log("Name:" + privateName);
+        }
+ 
+        function publicDisplay( name ) {
+            privateName = name;
+            privateDisplay();
+        }
+ 
+        return { display: publicDisplay };
+    })();
+ 
+myRevealingModule.display("My JavaScript Module");
+```
 
 ### CommonJS
 
@@ -36,23 +53,52 @@ In January 2009, however, Kevin Danger started the CommonJS project for better s
 
 But in May 2013, Isaac Z. Schlueter, npm author, said that CommonJS was being discontinued by Node.js, and that it would be avoided by the project maintainers. The following is an example of a module using CommonJS:
 
-<script src="https://gist.github.com/hugomn/dd0ee6ab22228ad409311eccc91d14c4.js"></script>
+```javascript
+// commonJs_double.js
+module.exports = function(number) {
+  return number * 2; 
+}
+```
 
-<script src="https://gist.github.com/hugomn/4e386b62684967a4cd691a3e2d408a45.js"></script>
+```javascript
+// commonJs_index.js
+var double = require('/commonJs_double');
+
+console.log(double(4)); // 8
+```
 
 ### Asynchronous Module Definition (AMD)
 
 Since the implementation of CommonJS was not compatible with browsers, the definition of asynchronous modules, or AMD, was introduced. AMD was created to be used in browsers to improve applications startup time, and such modules could be objects, functions, constructors, strings, JSON, etc. Here is an example of an AMD module:
 
-<script src="https://gist.github.com/hugomn/bd04b870151a2c1c61ca696ebfcff6d0.js"></script>
+```javascript
+define(["module1", "module2"], function(module1, module2) {
+    // The function is called only when the requested modules 
+    // are finished loading. The define function takes the first 
+    // argument as an array of dependency modules. These modules are 
+    // loaded in a non-blocking manner in the background and once the 
+    // loading is completed, the callback function is executed.
+    module1.someMethod();
+}
+```
 
 ### ES2015 Modules
 
 ES2015 modules have been implemented in the recent ECMAScript 2015 implementation of Javascript, and are compatible with the **asynchronous** and **synchronous** approaches. And it has one great advantage: **it's native JavaScript! 🤩**. However it is not completely available in all browsers and for this you need a **transpiler** like **Babel** for example.
 
-<script src="https://gist.github.com/hugomn/8cf95a5619aac64bebd220abe21acf00.js"></script>
+```javascript
+// es2015_square.js
+export function square(x) {
+    return x * x; 
+}
+```
 
-<script src="https://gist.github.com/hugomn/c7970afb33ff7a1af5b476a89a4a844b.js"></script>
+```javascript
+// es2015_index.js
+import { square } from 'es2015_square';
+
+console.log(square(11)); // 121
+```
 
 Now that we've seen a quick introduction to JavaScript modules, let's understand how **Rollup.js** can help us compile our components into reusable components.
 

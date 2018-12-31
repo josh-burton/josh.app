@@ -30,7 +30,7 @@ const Post = styled.article`
 `;
 
 const H1 = styled.h1`
-  padding-bottom: 0;
+  padding: 0;
   font-family: ${props => props.theme.blog.post.header.fontFamily};
   margin: ${props => props.theme.blog.post.header.margin};
   font-size: ${props => props.theme.blog.post.header.fontSize};
@@ -66,46 +66,6 @@ const Content = styled.section`
     }
   }
 
-  a{
-    color: ${props => props.theme.blog.post.content.a.color};
-  }
-
-  h1{
-    margin:${props => props.theme.blog.post.content.h1.margin};
-    padding:${props => props.theme.blog.post.content.h1.padding};
-    font-size:${props => props.theme.blog.post.content.h1.fontSize};
-  }
-
-  h2{
-    margin:${props => props.theme.blog.post.content.h2.margin};
-    padding:${props => props.theme.blog.post.content.h2.padding};
-    font-size:${props => props.theme.blog.post.content.h2.fontSize};
-  }
-
-  h3{
-    margin:${props => props.theme.blog.post.content.h3.margin};
-    padding:${props => props.theme.blog.post.content.h3.padding};
-    font-size:${props => props.theme.blog.post.content.h3.fontSize};
-  }
-
-  h4{
-    margin:${props => props.theme.blog.post.content.h4.margin};
-    padding:${props => props.theme.blog.post.content.h4.padding};
-    font-size:${props => props.theme.blog.post.content.h4.fontSize};
-  }
-
-  h5{
-    margin:${props => props.theme.blog.post.content.h5.margin};
-    padding:${props => props.theme.blog.post.content.h5.padding};
-    font-size:${props => props.theme.blog.post.content.h5.fontSize};
-  }
-
-  h6{
-    margin:${props => props.theme.blog.post.content.h6.margin};
-    padding:${props => props.theme.blog.post.content.h6.padding};
-    font-size:${props => props.theme.blog.post.content.h6.fontSize};
-  }
-
   p {
     margin:${props => props.theme.blog.post.content.p.margin};
     padding:${props => props.theme.blog.post.content.p.padding};
@@ -136,43 +96,18 @@ const Content = styled.section`
   }
 
   blockquote {
+    border-left: 4px solid #00ab6b;
     font-style: italic;
-    margin: 0;
-    padding: ${({ theme }) => theme.scale(3)};    
+    margin: ${({ theme }) => theme.scale(3)} 0 0;
+    padding: ${({ theme }) => theme.scale(0)} ${({ theme }) => theme.scale(1)};    
     position: relative;
-    text-align: center;
-    color: ${({ theme }) => theme.colors.white};
+    text-align: left;
+    color: ${({ theme }) => theme.colors.lightGray};
   }
 
-  blockquote:before {
-    line-height: 1.45;
-    display: block;
-    content: "\\201C";
-    position: absolute;
-    top: -${({ theme }) => theme.scale(-4)};
-    left: -${({ theme }) => theme.scale(1)};
-    font-size: ${({ theme }) => theme.scale(10)};
-    color: ${({ theme }) => theme.colors.white};
-  }
-
-  blockquote:after {
-    display: block;
-    content: "\\201D";
-    position: absolute;
-    bottom: -${({ theme }) => theme.scale(6)};
-    right: ${({ theme }) => theme.scale(1)};
-    font-size: ${({ theme }) => theme.scale(10)};
-    color: ${({ theme }) => theme.colors.white};
-  }
-
-  blockquote cite {
-    color: ${({ theme }) => theme.colors.blue};
-    font-size: ${({ theme }) => theme.scale(-1)};
-    display: block;
-  }
-     
-  blockquote cite:before {
-    content: "\\2014 \\2009";
+  blockquote p {
+    margin: 0;
+    padding: 0;
   }
 
   img {
