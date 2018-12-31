@@ -2,40 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
 
 const Section = styled.section`
-  text-align: center;
-  margin: 1rem;
+  text-align: celeftnter;
+  margin: 1rem 0;
   padding: 0;
-`;
-
-const Header = styled.header`
-    padding: ${({theme}) => theme.scale(-3)} 0;
-    display: block;
 `;
 
 const Li = styled.li`
     display: inline;
-
     &:not(:last-child):after{
-        content: ',';
+        content: ' ';
         margin: 0 1rem 0 0;
         display: inline-block;
     }
 `;
 
 const A = styled(Link)`
-  font-weight: bold;
-  color: ${({theme}) => theme.colors.yellow};
+  font-family: ${({theme}) => theme.fonts.SansSerif};
+  font-size: ${({theme}) => theme.scale(0)};
+  color: ${({theme}) => theme.colors.black};
+  background: rgba(0,0,0,.05);
+  border-radius: 3px;
   display: inline-block;
   position: relative;
-  text-decoration: underline;
   transition: 0.3s;
-  padding: ${({theme}) => theme.scale(-2)} 0 ${({theme}) => theme.scale(-2)} 0;
-
+  padding: ${({theme}) => theme.scale(-2)} ${({theme}) => theme.scale(-2)};
   &:hover {
-      color: ${({theme}) => theme.colors.white};
+      color: ${({theme}) => theme.colors.green};
       transition: 0.3s;
   }
 `;
@@ -66,9 +60,6 @@ const Tags = (props) => {
 
   return (
     <Section>
-      <Header>
-        <FormattedMessage id="tags" />
-      </Header>
       <Ul>
         {
           (props.tags || []).map((tag, i) =>

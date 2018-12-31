@@ -41,7 +41,8 @@ export const pageQuery = graphql`
             slug,
             langKey
           },
-          excerpt
+          excerpt,
+          timeToRead
         }
       }
     }

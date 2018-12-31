@@ -22,7 +22,7 @@ const AllTagsLink = styled(Link)`
   text-align: center;
   padding: ${({ theme }) => theme.scale(1)} 0;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.green};
   font-size: ${({ theme }) => theme.scale(0)};
   display: block;
   position: relative;

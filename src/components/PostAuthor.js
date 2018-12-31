@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 import Gravatar from 'react-gravatar';
 import Time from '../components/Time';
+import { formatReadingTime } from '../utils/helpers'
 
 const Wrapper = styled(Grid)`
   font-family: ${props => props.theme.blog.author.fontFamily};
@@ -11,7 +12,7 @@ const Wrapper = styled(Grid)`
   line-height: ${props => props.theme.blog.author.lineHeight};
 `;
 
-const Date = styled(Time)`
+const Date = styled.span`
   color: ${props => props.theme.blog.author.time.color};
   display: block;
 `;
@@ -25,13 +26,13 @@ const FollowButton = styled.a`
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  height: 21px;
+  height: 19px;
   padding: 0 10px;
   color: rgba(0,0,0,.84);
   border: 1px solid rgba(0,0,0,.68);
   border-radius: 4px;
   user-select: none!important;
-  margin-left: 14px;
+  margin: 0 14px 4px;
   span {
     font-size: 13px;
     line-height: 19px;
@@ -39,7 +40,8 @@ const FollowButton = styled.a`
   }
 `;
 
-const PostAuthor = ({ author, className, date, showFollow }) => {
+const PostAuthor = ({ author, className, date, showFollow, timeToRead }) => {
+  console.log('[dev:hugo] timeToRead', timeToRead);
   return (
     <Wrapper columns={'50px 1fr'} className={className}>
       <Cell middle>
@@ -54,10 +56,12 @@ const PostAuthor = ({ author, className, date, showFollow }) => {
             </FollowButton> 
             : null }
         </span>
-        <Date
-          pubdate="pubdate"
-          date={date}
-        />
+        <Date>
+          <Time
+            pubdate="pubdate"
+            date={date}
+          />{` • ${formatReadingTime(timeToRead)}`}
+        </Date>
       </Cell>
     </Wrapper>
   );
@@ -67,7 +71,8 @@ PostAuthor.propTypes = {
   author: PropTypes.object.isRequired,
   className: PropTypes.string,
   date: PropTypes.string.isRequired,
-  showFollow: PropTypes.boolean
+  showFollow: PropTypes.bool,
+  timeToRead: PropTypes.number.isRequired
 };
 
 export default PostAuthor;

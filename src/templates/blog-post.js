@@ -118,10 +118,6 @@ class BlogPostRoute extends React.PureComponent {
     const { author, siteUrl } = this.props.data.site.siteMetadata;
     const url = `${siteUrl}${post.fields.slug}`;
 
-    const tags = (
-      <Tags tags={post.fields.tagSlugs} />
-    );
-
     return (
       <Layout location={this.props.location}>
         <Post>
@@ -138,7 +134,7 @@ class BlogPostRoute extends React.PureComponent {
             <H1>
               {post.frontmatter.title}
             </H1>
-            <Author author={author} date={post.frontmatter.date} showFollow />
+            <Author author={author} date={post.frontmatter.date} timeToRead={post.timeToRead} showFollow />
             <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
             {/* <Time
               pubdate="pubdate"
@@ -149,8 +145,8 @@ class BlogPostRoute extends React.PureComponent {
             fileAbsolutePath={post.fileAbsolutePath}
             currentLangKey={langKey}
           /> */}
-          {/* {tags} */}
           <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Tags tags={post.fields.tagSlugs} />
           <Comments
             shortname="hugomagalhes"
             identifier={post.fields.slug}
@@ -185,6 +181,7 @@ export const pageQuery = graphql`
       fileAbsolutePath
       html
       excerpt
+      timeToRead
       fields {
         tagSlugs {
           tag

@@ -13,7 +13,7 @@ const BtnLink = styled(Link)`
 
     &:hover {
         background-color: ${props => props.theme.colors.blackShades[0]};
-        color: ${({theme}) => theme.colors.yellow};
+        color: ${({theme}) => theme.colors.green};
         transition: 0.3s;
     }
 `;

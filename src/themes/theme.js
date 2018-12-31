@@ -7,7 +7,6 @@ const scale = n => `${scaleN(n)}rem`;
 const colors = {
   white: '#FFFFFF',
   black: '#212529', 
-  yellow: '#E2C044',
   red: '#FF0000',
   darkBlue: '#587B7F',
   blue: '#85B9BF',
