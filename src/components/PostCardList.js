@@ -11,7 +11,6 @@ const Ul = styled.ul`
 `;
 
 const PostCardList = (props) => {
-  console.log('[dev:hugo] props', props);
   return (
     <nav>
       {/* <Ul>

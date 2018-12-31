@@ -117,7 +117,6 @@ class BlogPostRoute extends React.PureComponent {
     const structuredData = getStructuredData(post);
     const { author, siteUrl } = this.props.data.site.siteMetadata;
     const url = `${siteUrl}${post.fields.slug}`;
-    console.log('[dev:hugo] post.fields.tagSlugs', post.fields.tagSlugs[0]);
 
     const tags = (
       <Tags tags={post.fields.tagSlugs} />
