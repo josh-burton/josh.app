@@ -6,7 +6,7 @@ import GoogleIcon from 'react-icons/lib/fa/google-plus';
 import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
 import styled from 'styled-components';
 import { visible } from '../constants/responsive'; 
-import Clap from 'react-clap-button';
+// import Clap from 'react-clap-button';
 import links from '../constants/socialLinks';
 
 
@@ -40,19 +40,19 @@ const A = styled.a`
 const Wrapper = styled.section`
   position: fixed;
   top: 0;
-  transform: translateY(230px) translateX(-100px);
+  transform: translateY(230px) translateX(-80px);
   ${visible.lg}
 `;
 
-const ClapWrapper = styled.div`
-  margin-bottom: 20px;
-`;
+// const ClapWrapper = styled.div`
+//   margin-bottom: 20px;
+// `;
 
 const ShareWidget = ({ url, message }) => {
   return (
     <Wrapper>
       <Ul>
-        <li>
+        {/* <li>
           <ClapWrapper>
             <Clap
               count={0}
@@ -64,7 +64,7 @@ const ShareWidget = ({ url, message }) => {
               }}
             />
           </ClapWrapper>
-        </li>
+        </li> */}
         <li>
           <A href={links.twitter(url, message)} target="_blank"
             rel="noreferrer noopener"
