@@ -1,12 +1,15 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - gh-pages
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
     environment:
       - SOURCE_BRANCH: master
-      - TARGET_BRANCH: master
+      - TARGET_BRANCH: gh-pages
     steps:
       - checkout
       - restore_cache:
@@ -27,9 +30,19 @@ jobs:
               git config --global user.email $GH_EMAIL
               git config --global user.name $GH_NAME
 
-              git rm -rf ./docs
+              git clone $CIRCLE_REPOSITORY_URL out
+
+              cd out
+              git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              git rm -rf .
+              cd ..
+
               npm run build
-              mv ./public ./docs
+
+              cp -a public/. out/.
+
+              mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
+              cd out
 
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
