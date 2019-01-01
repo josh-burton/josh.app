@@ -115,7 +115,7 @@ class BlogPostRoute extends React.PureComponent {
     const post = this.props.data.markdownRemark;
     const { langKey } = this.props.pageContext;
     const structuredData = getStructuredData(post);
-    const { author, siteUrl } = this.props.data.site.siteMetadata;
+    const { author, disqusShortname, siteUrl } = this.props.data.site.siteMetadata;
     const url = `${siteUrl}${post.fields.slug}`;
 
     return (
@@ -148,12 +148,12 @@ class BlogPostRoute extends React.PureComponent {
           <Content dangerouslySetInnerHTML={{ __html: post.html }} />
           <Tags tags={post.fields.tagSlugs} />
           <Comments
-            shortname="hugomagalhes"
+            shortname={disqusShortname}
             identifier={post.fields.slug}
             title={post.frontmatter.title}
             url={url}
           />
-          <ShareWidget url={url} message={post.excerpt} />
+          <ShareWidget disqusShortname={disqusShortname} url={url} message={post.excerpt} />
           {/* {tags} */}
           {/* <PostCardList
             posts={post.fields.readNextPosts}
@@ -246,6 +246,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
+        disqusShortname
         author {
           name
           email

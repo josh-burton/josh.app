@@ -10,6 +10,7 @@ module.exports = {
     defaultLink: 'https://github.com/hugomn'
   },
   sourceCodeLink: 'https://github.com/hugomn/hugomagalhaes.com',
+  disqusShortname: 'hugomagalhes',
   menu: [
     {label: 'home', slug: '/'},
     // {label: 'blog', slug: '/blog/'},

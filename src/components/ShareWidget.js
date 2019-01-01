@@ -6,8 +6,8 @@ import GoogleIcon from 'react-icons/lib/fa/google-plus';
 import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
 import styled from 'styled-components';
 import { visible } from '../constants/responsive'; 
-// import Clap from 'react-clap-button';
 import links from '../constants/socialLinks';
+import DisqusCounter from './DisqusCounter';
 
 
 const Ul = styled.ul`
@@ -44,27 +44,19 @@ const Wrapper = styled.section`
   ${visible.lg}
 `;
 
-// const ClapWrapper = styled.div`
-//   margin-bottom: 20px;
-// `;
+const DisqusContainer = styled.li`
+  color: rgba(0, 0, 0, 0.44);
+  border-top: 1px solid rgba(0, 0, 0, 0.30);
+  padding-top: 20px;
+  font-size: 0.7rem;
+  max-width: 60px;
+  text-align: center;
+`;
 
-const ShareWidget = ({ url, message }) => {
+const ShareWidget = ({ disqusShortname, url, message }) => {
   return (
     <Wrapper>
       <Ul>
-        {/* <li>
-          <ClapWrapper>
-            <Clap
-              count={0}
-              countTotal={0}
-              isClicked={false}
-              maxCount={50}
-              theme={{
-                size: 60
-              }}
-            />
-          </ClapWrapper>
-        </li> */}
         <li>
           <A href={links.twitter(url, message)} target="_blank"
             rel="noreferrer noopener"
@@ -97,12 +89,19 @@ const ShareWidget = ({ url, message }) => {
             <GoogleIcon />
           </A>
         </li>
+        <DisqusContainer>
+          <DisqusCounter
+            url={url}
+            shortname={disqusShortname}
+          />
+        </DisqusContainer>
       </Ul>
     </Wrapper>
   );
 };
 
 ShareWidget.propTypes = {
+  disqusShortname: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired
 };
