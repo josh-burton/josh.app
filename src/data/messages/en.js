@@ -7,7 +7,7 @@ module.exports = {
   'blog': 'Blog',
   'all': 'All',
   'posts': 'Posts',
-  'posts.seeMore': 'See more interesting posts >>',
+  'posts.seeMore': 'See more posts →',
   'tags': 'Post Tags',
   'tags.allTagsLink': 'Browse all tags',
   'tags.nPostsTaggedWith': `{nPosts, number} {nPosts, plural,
@@ -16,4 +16,6 @@ module.exports = {
     } tagged with`,
   'contact': 'Contact',
   'call': 'Schedule a call',
+  'index.featured': 'Featured',
+  'index.stories': 'All stories'
 };

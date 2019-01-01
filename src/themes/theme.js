@@ -185,7 +185,7 @@ const theme = {
       }
     },
     list: {
-      margin: `${scale(4)} 0 0 0`,
+      margin: `0 0 ${scale(4)} 0`,
       header: {
         fontSize: scale(6),
         padding: `${scale(1)} 0 0 0`,

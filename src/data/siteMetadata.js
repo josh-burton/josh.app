@@ -4,6 +4,7 @@ module.exports = {
   siteUrl: 'https://www.hugomagalhaes.com',
   author: {
     name: 'Hugo Nogueira',
+    bio: 'Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href="https://www.bcgdv.com">BCG Digital Ventures</a>. Berlin, Germany',
     homeCity: 'Berlin',
     email: 'hugomn@gmail.com',
     twitter: 'hugomn',

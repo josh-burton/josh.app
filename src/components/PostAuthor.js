@@ -59,7 +59,7 @@ const PostAuthor = ({ author, className, date, showFollow, timeToRead }) => {
           <Time
             pubdate="pubdate"
             date={date}
-          />{` • ${formatReadingTime(timeToRead)}`}
+          />{timeToRead && ` • ${formatReadingTime(timeToRead)}`}
         </Date>
       </Cell>
     </Wrapper>
@@ -71,7 +71,7 @@ PostAuthor.propTypes = {
   className: PropTypes.string,
   date: PropTypes.string.isRequired,
   showFollow: PropTypes.bool,
-  timeToRead: PropTypes.number.isRequired
+  timeToRead: PropTypes.number
 };
 
 export default PostAuthor;

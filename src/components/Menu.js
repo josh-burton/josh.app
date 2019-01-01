@@ -115,9 +115,18 @@ const Ul = styled.ul`
       opacity: 1;
       margin: ${props => props.theme.menu.desktop.ul.margin};
       transform: none;
-      display: flex;
-      flex-direction: row;
+      li {
+        display: inline-block;
+      }
     `}
+`;
+
+const FixedContainer = styled.div`
+  ${media.md`
+    width: ${props => props.theme.maxWidth};
+    margin: 0 auto;
+    text-align: right;
+  `}
 `;
 
 class Menu extends React.PureComponent {
@@ -186,9 +195,11 @@ class Menu extends React.PureComponent {
               onChange={this.open}
             />
           </MenuLabel>
-          <Ul isOpen={isOpen}>
-            {menuItems}
-          </Ul>
+          <FixedContainer>
+            <Ul isOpen={isOpen}>
+              {menuItems}
+            </Ul>
+          </FixedContainer>
         </Nav>
       </section>
     );

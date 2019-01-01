@@ -1,54 +1,116 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Gravatar from 'react-gravatar';
+import { Grid, Cell } from 'styled-css-grid';
+import FacebookIcon from 'react-icons/lib/fa/facebook';
+import TwitterIcon from 'react-icons/lib/fa/twitter';
+import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
+import InstagramIcon from 'react-icons/lib/fa/instagram';
+import DribbleIcon from 'react-icons/lib/fa/dribbble';
+import GithubIcon from 'react-icons/lib/fa/github';
 
-const Wrapper = styled.section`
+
+const Wrapper = styled(Grid)`
   margin-top: ${props => props.theme.welcome.marginTop};
   margin-bottom: ${props => props.theme.welcome.marginBottom};
+  font-family: ${props => props.theme.blog.author.fontFamily};
+  font-size: ${props => props.theme.blog.author.fontSize};
+  line-height: ${props => props.theme.blog.author.lineHeight};
 `;
 
-const getWelcomeMsg = () => {
-  return {
-    en: (
-      <p>
-        Hi! Welcome to my site, where you can learn about Web, App and software development.<br />
-        I welcome you to accept my challenge: <mark> Study every day </mark>, at least 10 minutes.
-        Do NOT stop learning about tecnology, life, arts, languages, anything that you like.<br /><br />
-        Face your fears! Learning keeps us young, it makes us see the universe in a new perspective and fall in love.<br />
-        Are you ready to learn and change your life?
-      </p>
-    ),
-    pt: (
-      <p>
-        Oi! Bem-vindo ao meu site, aqui você pode aprender sobre desenvolvimento de aplicações Web, Sites e Apps.<br />
-        Convido você a aceitar o meu desafio: <mark> Estude todos os dias </mark>, pelo menos 10 minutos.
-        NÃO pare de estudar sobre tecnologia, vida, artes, idiomas, qualquer coisa que você goste.<br /><br />
-        Enfrente seus medos! Aprender nos mantém jovens, faz-nos ver o universo em uma nova perspectiva e se apaixonar.<br />
-        Você está pronto para aprender e mudar sua vida?
-      </p>
-    ),
-    fr: (
-      <p>
-        Salut! Bienvenue sur mon site, ici vous pouvez en apprendre davantage sur le développement d'applications Web.<br />
-        Je vous invite à accepter mon défi: <mark> Étudie chaque jour </mark> au moins 10 minutes.
-        Ne cessez pas d'étudier la technologie, la vie, les arts, les langues, tout ce que vous aimez.<br /><br />
-        Faites face à vos peurs! L'apprentissage nous garde jeune, nous fait voir l'univers d' une nouvelle perspective et nous fait tomber amoureux.<br />
-        Êtes-vous prêt à apprendre et à changer votre vie?
-      </p>
-    )
-  };
-};
+const ProfilePicture = styled(Gravatar)`
+  display: block;
+  border-radius: 50%;
+  border: 4px solid ${props => props.theme.colors.green};
+`;
 
-const Welcome = ({ currentLangKey }) => {
+const Bio = styled.span`
+  color: ${props => props.theme.blog.author.time.color};
+  display: block;
+  font-size: 1rem;
+`;
+
+const SocialLinks = styled.ul`
+  margin-top: 6px;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+`;
+
+const A = styled.a`
+  color: ${props => props.theme.colors.black};
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: ${props => props.theme.socialLinks.a.padding};
+  transition: 0.3s;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    color: ${props => props.theme.socialLinks.a.hover.color};
+    transition: 0.3s;
+  }
+`;
+
+const Name = styled.span`
+  font-size: 2.4rem;
+  font-family: ${props => props.theme.fonts.SansSerif};
+`;
+
+const Welcome = ({ author, className }) => {
   return (
-    <Wrapper>
-      {getWelcomeMsg()[currentLangKey]}
+    <Wrapper columns={'153px 1fr'} className={className}>
+      <Cell middle>
+        <ProfilePicture email={author.email} alt={author.name} size={128} />
+      </Cell>
+      <Cell middle>
+        <Name>
+          { author.name }
+        </Name>
+        <Bio dangerouslySetInnerHTML={{ __html: author.bio }} />
+        <SocialLinks>
+          <li>
+            <A href="https://facebook.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <FacebookIcon />
+            </A>
+          </li>
+          <li>
+            <A href="https://twitter.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <TwitterIcon />
+            </A>
+          </li>
+          <li>
+            <A href="https://linkedin.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <LinkedinIcon />
+            </A>
+          </li>
+          <li>
+            <A href="https://instagram.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <InstagramIcon />
+            </A>
+          </li>
+          <li>
+            <A href="https://dribbble.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <DribbleIcon />
+            </A>
+          </li>
+          <li>
+            <A href="https://github.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+              <GithubIcon />
+            </A>
+          </li>
+        </SocialLinks>
+      </Cell>
     </Wrapper>
   );
 };
 
 Welcome.propTypes = {
-  currentLangKey: PropTypes.string
+  author: PropTypes.object.isRequired,
+  className: PropTypes.string
 };
 
 export default Welcome;

@@ -3,7 +3,7 @@ title: My personal mission statement
 date: '2018-08-01'
 layout: page
 draft: false
-featured: true
+featured: false
 tags: 
   - personal
   - development

@@ -11,16 +11,16 @@ import pt from '../data/messages/pt';
 import enData from 'react-intl/locale-data/en';
 import ptData from 'react-intl/locale-data/pt';
 import theme from '../themes/theme';
-import {
-  getLangs,
-  getUrlForLang,
-  getCurrentLangKey,
-  isHomePage
-} from 'ptz-i18n';
+import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from 'ptz-i18n';
 
 const messages = { en, pt };
 
 addLocaleData([...enData, ...ptData]);
+
+const Container = styled(FixedContainer)`
+  padding: ${props => props.theme.padding};
+  margin: ${props => props.theme.margin};
+`;
 
 const Layout = (props) => {
   const { children, location } = props;
@@ -45,11 +45,11 @@ const Layout = (props) => {
             url={url}
             menu={menu}
           />
-          <FixedContainer>
+          <Container>
             <main>
               {children}
             </main>
-          </FixedContainer>
+          </Container>
           <Footer
             author={author}
             langs={langsMenu}
