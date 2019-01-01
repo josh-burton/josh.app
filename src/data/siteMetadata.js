@@ -1,7 +1,7 @@
 const languages = require('./languages');
 
 module.exports = {
-  siteUrl: 'https://hugomagalhaes.com',
+  siteUrl: 'https://www.hugomagalhaes.com',
   author: {
     name: 'Hugo Nogueira',
     homeCity: 'Berlin',
