@@ -14,7 +14,7 @@ module.exports = {
   disqusShortname: 'hugomagalhes',
   menu: [
     {label: 'home', slug: '/'},
-    // {label: 'blog', slug: '/blog/'},
+    {label: 'blog', slug: '/blog/'},
     {label: 'about', slug: '/about/'},
     {label: 'contact', slug: '/contact/'},
     {label: 'call', link: 'http://call.hugomagalhaes.com/'},

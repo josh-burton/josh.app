@@ -7,6 +7,7 @@ import { withPrefix } from 'gatsby';
 import FaHeart from 'react-icons/lib/fa/heart';
 import SelectLanguage from './SelectLanguage';
 import FixedContainer from './FixedContainer';
+import { media, visible } from '../constants/responsive';
 
 const Wrapper = styled.footer`
   border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
@@ -34,7 +35,6 @@ const GithubIcon = styled(FaGithub)`
   color: ${({ theme }) => theme.colors.black};
   display: inline-block;
   margin: auto;
-  margin: 0;
   opacity: 0.7;
   padding: 0 ${({ theme }) => theme.scale(-6)} 0 0;
 `;
@@ -51,10 +51,24 @@ const HeartIcon = styled(FaHeart)`
 
 const MiddleCell = styled(Cell)`
   text-align: center;
+  display:none;
+  ${media.md`
+    display: inline-flex;
+  `};
+`;
+
+const LeftCell = styled(Cell)`
+  text-align: center;
+  ${media.md`
+    text-align: left;
+  `};
 `;
 
 const RightCell = styled(Cell)`
-  text-align: right;
+  text-align: center;
+  ${media.sm`
+    text-align: right;
+  `};
 `;
 
 const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
@@ -62,14 +76,14 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
     <Wrapper>
       <FixedContainer>
         <Grid columns={'repeat(auto-fit,minmax(220px,1fr))'}>
-          <Cell middle>
+          <LeftCell middle>
             <span>
               {' Made with '}<HeartIcon />{' and '} 
               <a href="https://www.gatsbyjs.org/" target="_blank">
                 <GatsbyIcon src={withPrefix('/img/gatsbyjs.svg')} alt="Gatsby" />
               </a>{' by '} <span>{author.name}</span>
             </span>
-          </Cell>
+          </LeftCell>
           <MiddleCell middle>
             <a href={sourceCodeLink} target="_blank">
               <GithubIcon />

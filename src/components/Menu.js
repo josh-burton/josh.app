@@ -23,8 +23,9 @@ const Nav = styled.nav`
   text-align: center;
   position: fixed;
   top: 0;
-  right: calc(2rem - 100%);  
+  right: calc(-100%);  
   width: 100%;
+  box-sizing: border-box;
   height: 100%;
   z-index: 2;
   padding: ${props => props.theme.menu.mobile.padding};
@@ -37,9 +38,9 @@ const Nav = styled.nav`
     display: flex;
     flex-grow: 1;
     align-items: center;
-    top: 0;
-    right: 0;
-    left: 0;
+    position: relative;
+    right: auto;
+    left: auto;
     height: auto;
     z-index: 1030;
     transform: none;
@@ -54,9 +55,8 @@ const MenuLabel = styled.label`
   position: relative;
   float: left;
   cursor: pointer;
-  color: ${props => props.isOpen
-    ? props.theme.colors.white
-    : props.theme.colors.dark};
+  color: ${props => props.theme.colors.dark};
+  margin: 0.8rem 1.5rem;
   transition: color 0.4s;
   font-size: ${props => props.theme.menu.mobile.label.fontSize};
   &:hover {
@@ -110,11 +110,9 @@ const Ul = styled.ul`
     list-style: none;
     transition: opacity 1s, transform 0.5s;
     opacity: ${props => props.isOpen ? 1 : 0};
-    transform: ${props => props.isOpen ? 'translateX(-4rem)' : ''};
     ${media.md`
       opacity: 1;
       margin: ${props => props.theme.menu.desktop.ul.margin};
-      transform: none;
       li {
         display: inline-block;
       }
@@ -186,15 +184,15 @@ class Menu extends React.PureComponent {
     return (
       <section>
         <CloseNav isOpen={isOpen} onClick={this.open} />
+        <MenuLabel isOpen={isOpen} htmlFor="cb-menu">
+          <MenuIcon />
+          <InvisibleSpan>Menu</InvisibleSpan>
+          <Checkbox type="checkbox" name="cb-menu" id="cb-menu"
+            checked={this.state.isOpen}
+            onChange={this.open}
+          />
+        </MenuLabel>
         <Nav isOpen={isOpen}>
-          <MenuLabel isOpen={isOpen} htmlFor="cb-menu">
-            <MenuIcon />
-            <InvisibleSpan>Menu</InvisibleSpan>
-            <Checkbox type="checkbox" name="cb-menu" id="cb-menu"
-              checked={this.state.isOpen}
-              onChange={this.open}
-            />
-          </MenuLabel>
           <FixedContainer>
             <Ul isOpen={isOpen}>
               {menuItems}

@@ -9,6 +9,7 @@ import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
 import InstagramIcon from 'react-icons/lib/fa/instagram';
 import DribbleIcon from 'react-icons/lib/fa/dribbble';
 import GithubIcon from 'react-icons/lib/fa/github';
+import { media } from '../constants/responsive';
 
 
 const Wrapper = styled(Grid)`
@@ -22,13 +23,18 @@ const Wrapper = styled(Grid)`
 const ProfilePicture = styled(Gravatar)`
   display: block;
   border-radius: 50%;
-  border: 4px solid ${props => props.theme.colors.green};
+  border: 4px solid #ecf0f1;
 `;
 
 const Bio = styled.span`
   color: ${props => props.theme.blog.author.time.color};
   display: block;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  br { display: none; }
+  ${media.md`
+    br { display: block; }
+    font-size: 1rem;
+  `}
 `;
 
 const SocialLinks = styled.ul`
@@ -56,8 +62,12 @@ const A = styled.a`
 `;
 
 const Name = styled.span`
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-family: ${props => props.theme.fonts.SansSerif};
+  margin-bottom: 0.3rem;
+  ${media.md`
+    font-size: 2.1rem;
+  `}
 `;
 
 const Welcome = ({ author, className }) => {

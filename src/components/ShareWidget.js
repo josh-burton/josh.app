@@ -40,6 +40,7 @@ const A = styled.a`
 const Wrapper = styled.section`
   position: fixed;
   top: 0;
+  width: 60px;
   transform: translateY(230px) translateX(-100px);
   ${visible.lg}
 `;

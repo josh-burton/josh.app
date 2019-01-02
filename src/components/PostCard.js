@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 import Img from 'gatsby-image';
 import Author from './PostAuthor';
+import { media } from '../constants/responsive';
 
 
 const GridContainer = styled(Grid)`
@@ -14,6 +15,14 @@ const GridContainer = styled(Grid)`
 const Wrapper = styled(GridContainer)`
   border: ${props => props.theme.blog.list.item.border};
   border-radius: 0.25rem;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: 3fr 5fr;
+  ${media.md`
+    ${props => props.imageOnTop
+    ? ` grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 1fr;`
+    : ''};
+  `}
 `;
 
 const Body = styled(Cell)`
@@ -66,7 +75,7 @@ const Image = styled(Img)`
 
 const PostCard = ({ post, author, imageOnTop }) => {
   return (
-    <Wrapper rows={imageOnTop ? 2 : 1} columns={imageOnTop ? '1fr' : '3fr 5fr'}>
+    <Wrapper imageOnTop={imageOnTop}>
       <Cell>
         <Link to={post.fields.slug}>
           <Image sizes={post.frontmatter.image.childImageSharp.sizes} />

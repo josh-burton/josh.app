@@ -6,32 +6,27 @@ import PostCardList from '../components/PostCardList';
 import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
+import BtnLink from '../components/BtnLink';
+
+const Wrapper = styled.section`
+  margin: ${props => props.theme.page.margin};
+  padding: ${props => props.theme.page.padding};
+`;
 
 const Header = styled.header`
-  text-align: center;
-  font-size: ${({ theme }) => theme.scale(1)};
+  font-family: ${props => props.theme.page.header.fontFamily};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin: ${props => props.theme.page.header.margin};
 `;
 
-const TagName = styled.span`
-  font-size: ${({ theme }) => theme.scale(5)};
-  display: block;
-  text-align: center;
-`;
-
-const AllTagsLink = styled(Link)`
-  text-align: center;
-  padding: ${({ theme }) => theme.scale(1)} 0;
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.green};
-  font-size: ${({ theme }) => theme.scale(0)};
-  display: block;
-  position: relative;
-  text-decoration: underline;
-  transition: 0.3s;
-
-  &:hover {
-      color: ${({ theme }) => theme.colors.white};
-      transition: 0.3s;
+const H1 = styled.h1`
+  font-size: 1.8rem;
+  padding: 0;
+  span {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    padding-bottom: ${({ theme }) => theme.scale(3.5)};
+    margin-bottom: -1px;
   }
 `;
 
@@ -40,43 +35,44 @@ const TagRoute = ({ data, pageContext, location }) => {
   const { author } = data.site.siteMetadata;
 
   const allTagsLink = (
-    <FormattedMessage id="tags.allTagsLink" >
+    <FormattedMessage id="tags.allTagsLink">
       {(txt) => (
-        <AllTagsLink
-          to={`/${pageContext.langKey}/tags/`}
-        >
+        <BtnLink to={`/${pageContext.langKey}/tags/`}>
           {txt}
-        </AllTagsLink>
+        </BtnLink>
       )}
     </FormattedMessage>
   );
 
   return (
     <Layout location={location}>
-      <section>
-        <Header>
-          <FormattedMessage id="tags">
-            {(txt) => (
+      <Wrapper>
+        <FormattedMessage id="tags">
+          {(txt) => (
+            <Header>
               <Helmet
                 title={`${pageContext.tag} | ${txt}`}
                 meta={[{ name: 'description', content: txt }]}
               />
-            )}
-          </FormattedMessage>
-          <FormattedMessage
-            id="tags.nPostsTaggedWith"
-            values={{ nPosts: data.allMarkdownRemark.totalCount }}
-          />
-          <TagName>“{pageContext.tag}”</TagName>
-          {allTagsLink}
-        </Header>
+              <H1>
+                <span>
+                  <FormattedMessage id="tags.nPostsTaggedWith" values={{ nPosts: data.allMarkdownRemark.totalCount }}>
+                    {(txt) => (
+                      `${txt} "${pageContext.tag}"`
+                    )}
+                  </FormattedMessage>
+                </span>
+              </H1>
+            </Header>
+          )}
+        </FormattedMessage>
         <PostCardList
           posts={posts} author={author}
         />
         <footer>
           {allTagsLink}
         </footer>
-      </section>
+      </Wrapper>
     </Layout>
   );
 };

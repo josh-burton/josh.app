@@ -49,6 +49,7 @@ const theme = {
     }
   },
   header: {
+    height: 64,
     title: {
       fontSize: scale(3),
       textAlign: 'left',
@@ -80,7 +81,7 @@ const theme = {
   },
   menu: {
     mobile: {
-      padding: `${scale(-1)} ${scale(3)}`,
+      padding: `${scale(3)} ${scale(3)}`,
       opened: {
         bg: colors.blackShades[0]
       },
@@ -103,7 +104,7 @@ const theme = {
         }
       },
       ul: {
-        margin: `${scale(6)} 0 0 ${scale(7.8)}`,
+        margin: `${scale(0.2)} 0 0 ${scale(0.2)}`,
       }
     },
     desktop: {
@@ -111,11 +112,11 @@ const theme = {
       bg: 'transparent',
       a: {
         fontFamily: fonts.System,
-        fontSize: scale(-1),
-        fontWeight: 500,
+        fontSize: scale(-0.5),
+        fontWeight: 400,
         padding: `${scale(1)} ${scale(-0.4)}`,
         textAlign: 'left',
-        color: colors.green,
+        color: colors.lightGray,
         active: {
           color: colors.darkGreen
         },

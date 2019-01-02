@@ -113,7 +113,6 @@ class BlogPostRoute extends React.PureComponent {
 
   render() {
     const post = this.props.data.markdownRemark;
-    const { langKey } = this.props.pageContext;
     const structuredData = getStructuredData(post);
     const { author, disqusShortname, siteUrl } = this.props.data.site.siteMetadata;
     const url = `${siteUrl}${post.fields.slug}`;
@@ -136,10 +135,6 @@ class BlogPostRoute extends React.PureComponent {
             </H1>
             <Author author={author} date={post.frontmatter.date} timeToRead={post.timeToRead} showFollow />
             <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
-            {/* <Time
-              pubdate="pubdate"
-              date={post.frontmatter.date}
-            /> */}
           </header>
           {/* <EditBtn
             fileAbsolutePath={post.fileAbsolutePath}
@@ -154,7 +149,6 @@ class BlogPostRoute extends React.PureComponent {
             url={url}
           />
           <ShareWidget disqusShortname={disqusShortname} url={url} message={post.excerpt} />
-          {/* {tags} */}
           {/* <PostCardList
             posts={post.fields.readNextPosts}
             langKey={langKey}
@@ -170,7 +164,6 @@ class BlogPostRoute extends React.PureComponent {
 BlogPostRoute.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object.isRequired,
-  pageContext: PropTypes.object
 };
 
 export default BlogPostRoute;
