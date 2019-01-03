@@ -6,7 +6,7 @@ import { Grid, Cell } from 'styled-css-grid';
 const PostCardList = (props) => {
   return (
     <nav>
-      <Grid columns="repeat(auto-fit,minmax(360px,1fr))" gap="30px" alignContent="stretch">
+      <Grid columns="repeat(auto-fit,minmax(260px,1fr))" gap="30px" alignContent="stretch">
         {props.posts.map(post =>
           <Cell key={post.fields.slug}>
             <PostCard post={post} {...props} />
