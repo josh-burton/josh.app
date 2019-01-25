@@ -4,14 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FixedContainer from '../components/FixedContainer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import { addLocaleData, IntlProvider } from 'react-intl';
+import { StaticQuery, graphql, withPrefix } from 'gatsby';
+import { addLocaleData, IntlProvider, FormattedMessage } from 'react-intl';
 import en from '../data/messages/en';
 import pt from '../data/messages/pt';
 import enData from 'react-intl/locale-data/en';
 import ptData from 'react-intl/locale-data/pt';
 import theme from '../themes/theme';
 import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from 'ptz-i18n';
+import Helmet from 'react-helmet';
 
 const messages = { en, pt };
 
@@ -28,9 +29,9 @@ const Layout = (props) => {
   const isHome = isHomePage(url);
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey}/`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-  const { menu, author, sourceCodeLink } = props.data.site.siteMetadata;
+  const homeLink = `/${langKey !== 'en' ? langKey : ''}`;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, '/') }));
+  const { menu, author, sourceCodeLink, siteUrl, description } = props.data.site.siteMetadata;
 
   return (
     <ThemeProvider theme={theme}>
@@ -39,6 +40,28 @@ const Layout = (props) => {
         messages={messages[langKey]}
       >
         <BodyContainer>
+          <FormattedMessage id="title">
+            {(txt) => (
+              <Helmet
+                defaultTitle={txt}
+                titleTemplate={`%s | ${txt}`}
+              >
+                <meta name="author" content={author.name} />
+                <meta name="description" content={description} />
+                <meta property="og:title" content={txt} />
+                <meta property="og:description" content={description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={`${siteUrl}${withPrefix('/avatar.jpg')}`} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={txt} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:site" content={`@${author.twitter}`} />
+                <meta name="twitter:author" content={`@${author.twitter}`} />
+                <meta name="twitter:image" content={`${siteUrl}${withPrefix('/avatar.jpg')}`} />
+              </Helmet>
+            )}
+          </FormattedMessage>
           <Header
             isHome={isHome}
             homeLink={homeLink}
@@ -82,32 +105,61 @@ const GlobalStyle = createGlobalStyle`
     margin:${props => props.theme.h1.margin};
     padding:${props => props.theme.h1.padding};
     font-size:${props => props.theme.h1.fontSize};
-    line-height: 1.2;
+    line-height: 1.4;
   }
   h2{
     margin:${props => props.theme.h2.margin};
     padding:${props => props.theme.h2.padding};
     font-size:${props => props.theme.h2.fontSize};
+    line-height: 1.4;
   }
   h3{
     margin:${props => props.theme.h3.margin};
     padding:${props => props.theme.h3.padding};
     font-size:${props => props.theme.h3.fontSize};
+    line-height: 1.4;
   }
   h4{
     margin:${props => props.theme.h4.margin};
     padding:${props => props.theme.h4.padding};
     font-size:${props => props.theme.h4.fontSize};
+    line-height: 1.4;
   }
   h5{
     margin:${props => props.theme.h5.margin};
     padding:${props => props.theme.h5.padding};
     font-size:${props => props.theme.h5.fontSize};
+    line-height: 1.4;
   }
   h6{
     margin:${props => props.theme.h6.margin};
     padding:${props => props.theme.h6.padding};
     font-size:${props => props.theme.h6.fontSize};
+    line-height: 1.4;
+  }
+  figcaption {
+    font-family: ${props => props.theme.fonts.System};
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  sup {
+    font-size: 75%;
+    vertical-align: super;
+  }
+  .footnotes {
+    ol, p {
+      font-size: 14px !important;
+    }
+    p {
+      padding-top: 0px !important;
+    }
+    .footnote-backref {
+      display: none;
+    }
+  }
+  .giphy-embed {
+    margin-top: 2rem;
   }
 `;
 
@@ -130,15 +182,19 @@ export default props => (
       query LayoutQuery {
         site {
           siteMetadata {
+            siteUrl
+            description
             languages {
               defaultLangKey
               langs
             }
             author {
               name
+              bio
               homeCity
               email
               defaultLink
+              twitter
             }
             sourceCodeLink
             menu {

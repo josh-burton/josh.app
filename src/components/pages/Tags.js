@@ -75,7 +75,7 @@ const Tags = (props) => {
                   style={{
                     textDecoration: 'none',
                   }}
-                  to={`${props.pageContext.langKey}/tags/${kebabCase(tag.fieldValue)}/`}
+                  to={`/tags/${kebabCase(tag.fieldValue)}/`}
                 >
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>

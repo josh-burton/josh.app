@@ -3,7 +3,7 @@ title: How to develop reusable components with Babel and RollupJS
 date: '2018-09-26'
 layout: post
 draft: false
-featured: true
+featured: false
 tags:
   - javascript
   - rollup.js

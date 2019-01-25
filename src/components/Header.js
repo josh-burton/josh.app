@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import Menu from './Menu';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
 import FixedContainer from './FixedContainer';
 import throttle from 'lodash.throttle';
 
@@ -21,7 +19,6 @@ const Wrapper = styled.header`
 
 const delta = 5;
 const navbarHeight = 64;
-console.log('[dev:hugo] navbarHeight', navbarHeight);
 
 class Header extends React.Component {
 
@@ -89,14 +86,6 @@ class Header extends React.Component {
     return (
       <Wrapper hidden={this.state.hidden}>
         <FixedContainer>
-          <FormattedMessage id="title">
-            {(txt) => (
-              <Helmet
-                defaultTitle={txt}
-                titleTemplate={`%s | ${txt}`}
-              />
-            )}
-          </FormattedMessage>
           <Menu menu={menu} url={url} />
         </FixedContainer>
       </Wrapper>

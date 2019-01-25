@@ -3,7 +3,7 @@ title: "var, let or const?"
 date: '2018-08-06'
 layout: post
 draft: false
-featured: true
+featured: false
 tags:
   - javascript
 image: ./images/20180806.png

@@ -47,7 +47,7 @@ const Blog = (props) => {
           )}
         </FormattedMessage>
         <PostCardList
-          posts={props.data.allMarkdownRemark.edges.map(p => p.node)} author={author}
+          posts={props.data.allMarkdownRemark.edges.map(p => p.node)} author={author} imageOnTop
         />
       </Wrapper>
     </Layout>

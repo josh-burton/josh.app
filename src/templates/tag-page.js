@@ -37,7 +37,7 @@ const TagRoute = ({ data, pageContext, location }) => {
   const allTagsLink = (
     <FormattedMessage id="tags.allTagsLink">
       {(txt) => (
-        <BtnLink to={`/${pageContext.langKey}/tags/`}>
+        <BtnLink to={`/tags/`}>
           {txt}
         </BtnLink>
       )}

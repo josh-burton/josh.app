@@ -21,7 +21,7 @@ export const pageQuery = graphql`
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { draft: { ne: true } },
+        frontmatter: { draft: { ne: true }, featured: { ne: true} },
         fields: { langKey: { regex: "/(pt|any)/" } }
       },
     ) {

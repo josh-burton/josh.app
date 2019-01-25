@@ -7,7 +7,7 @@ module.exports = {
   'blog': 'Blog',
   'all': 'Todos',
   'posts': 'Posts',
-  'posts.seeMore': 'Ver mais posts →',
+  'posts.seeMore': 'Ver todos os posts →',
   'tags': 'Post Tags',
   'tags.allTagsLink': 'Ver todas as tags',
   'tags.nPostsTaggedWith': `{nPosts, number} {nPosts, plural,

@@ -59,7 +59,7 @@ const Index = (props) => {
           <PostCardList posts={allStoriesPosts} author={author} imageOnTop />
           <FormattedMessage id="posts.seeMore">
             {(txt) => (
-              <BtnLink to={`/${langKey}/blog/`}>
+              <BtnLink to={`/${langKey !== 'en' ? langKey : ''}/blog/`}>
                 {txt}
               </BtnLink>
             )}

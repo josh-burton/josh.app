@@ -2,6 +2,7 @@ const languages = require('./languages');
 
 module.exports = {
   siteUrl: 'https://www.hugomagalhaes.com',
+  description: 'Senior software engineer and agile manager. React, and Node.js enthusiast. Engineering Lead @ BCG Digital Ventures. Berlin, Germany',
   author: {
     name: 'Hugo Nogueira',
     bio: 'Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href="https://www.bcgdv.com">BCG Digital Ventures</a>. Berlin, Germany',

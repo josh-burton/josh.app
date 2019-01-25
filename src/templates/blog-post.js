@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import EditBtn from '../components/EditBtn';
@@ -95,8 +95,7 @@ const Content = styled.section`
     color: ${({ theme }) => theme.colors.lightGray};
   }
 
-  blockquote p {
-    margin: 0;
+  blockquote > p:first-child {
     padding: 0;
   }
 
@@ -120,10 +119,20 @@ class BlogPostRoute extends React.PureComponent {
     return (
       <Layout location={this.props.location}>
         <Post>
-          <Helmet
-            title={`${post.frontmatter.title}`}
-            meta={[{ name: 'description', content: post.excerpt }]}
-          />
+          <Helmet>
+            <title>{post.frontmatter.title}</title>
+            <link rel="canonical" href={url} />
+            <meta name="description" content={post.excerpt} />
+            <meta property="og:title" content={post.frontmatter.title} />
+            <meta property="og:description" content={post.excerpt} />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content={url} />
+            <meta property="og:image" content={`${siteUrl}${withPrefix(post.frontmatter.image.publicURL)}`} />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content={post.frontmatter.title} />
+            <meta name="twitter:description" content={post.excerpt} />
+            <meta name="twitter:image" content={`${siteUrl}${withPrefix(post.frontmatter.image.publicURL)}`} />
+          </Helmet>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: structuredData }}
@@ -192,6 +201,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpSizes
               }
           }
+          publicURL
         }
         structuredData {
           alternativeHeadline

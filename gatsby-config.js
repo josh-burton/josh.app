@@ -9,12 +9,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-figure-caption`,
+            options: { figureClassName: 'md-figure' },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 740,
             },
           },
           {
@@ -69,9 +73,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
-        langKeyForNull: 'any',
+        langKeyForNull: 'en',
         langKeyDefault: 'en',
-        useLangKeyLayout: false,
+        useLangKeyLayout: true,
+        prefixDefault: false,
         markdownRemark: {
           postPage: 'src/templates/blog-post.js',
           query: `
@@ -96,7 +101,9 @@ module.exports = {
       options: { // Default options        
         tagPage: 'src/templates/tag-page.js',
         tagsUrl: '/tags/',
-        langKeyForNull: 'any'
+        langKeyForNull: 'en',
+        langKeyDefault: 'en',
+        prefixDefault: false
       }
     },
     'gatsby-plugin-styled-components'
