@@ -13,7 +13,7 @@ image: ./images/20190125.jpg
 
 ## What is diversity
 
-Diversity is any dimension that can be used to differentiate groups and people from one another. It is a concept, and it's main goal is to encompass acceptance and respect. It means understanding that each individual is unique, and recognizing our individual differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies.
+Diversity is any dimension that can be used to differentiate groups and people from one another. It is a concept and a set of conscious practices. It's main goal is to encompass acceptance and respect. It means understanding that each individual is unique, and recognizing our individual differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies.
 
 Diversity allows for the exploration of these differences in a safe, positive, and nurturing environment. It means understanding one another by surpassing simple tolerance to ensure people truly value their differences. This allows us both to embrace and also to celebrate the rich dimensions of diversity contained within each individual and place positive value on diversity in the community and in the workforce. 
 
@@ -23,7 +23,7 @@ Decades of research by organizational scientists, psychologists, sociologists, e
 
 Practices related to the work environment could contribute to inclusion as well as to organizational results. Diversity could impact positively on aspects such as innovation efficiency and teamwork on different phases of software development and knowledge areas.
 
-Difficulties have been encountered concerning equality in the IT industry, as well as barriers to inclusion of people with disabilities. Finally, the software development environment still consists of a majority of men unequally representing society, so there is an open field to practices that promote inclusion and a better understanding of this phenomenon to promote the equity of opportunities within the scope of software engineering[^1].
+Difficulties have been encountered concerning equality in the IT industry, as well as barriers to inclusion of people with disabilities. Finally, the software development environment still consists of a majority of men unequally representing society, so there is an open field to practices that promote inclusion and a better understanding of this phenomenon to promote the equity of opportunities within the scope of software engineering. [^1]
 
 ## How companies and leaders can promote diversity within their workforce
 ### 1. Encourage dialogue
@@ -39,7 +39,9 @@ In short, when people perceive one another as members of the same in-group, raci
 Many studies[^5] support this idea, at least implicitly, and one way to create an in-group feeling among people is to establish shared goals. Inclusion programs can make a start by creating teams whose members matter to one another because they’re part of the same in-group, pursuing the same interests. Focusing on common goals, and a common identity, will be critically important for eliminating bias — both within the enterprise and in leading the way for society at large.
 
 ## What diversity should not be about
-I'm not personally in favor of hiring targets or any kind of initiative that could bias your processes in terms of diversity. Besides that, promotion and evaluation decisions should never be based on diversity criteria.  One research conducted by BCG showed that this is one of the big risks of misunderstanding diversity in an organization. [^4] 
+I'm not personally in favor of hiring targets or any kind of initiative that could bias your processes in terms of diversity. Besides that, promotion and evaluation decisions should never be based on diversity criteria.  One research conducted by BCG showed that this is one of the big risks of misunderstanding diversity in an organization. [^4]  
+
+Recently, the movement to promote diversity in software teams is mainly geared toward getting more women into the workforce. Although a noble cause, it’s missing the larger vision. If not expanded, the movement risks alienating other minorities groups, and resulting in the lack of diversity within a different context.
 
 In his book [Management 3.0: Leading Agile Developers, Developing Agile Leaders](https://www.amazon.com/gp/product/0321712471/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321712471&linkCode=as2&tag=hugomn-20&linkId=7032864bf8f0b16d34dc719dde244755), Jurgen Appelo paints a nice picture from the perspective of an employee:
 
@@ -53,14 +55,11 @@ In his book [Management 3.0: Leading Agile Developers, Developing Agile Leaders]
 >
 > And besides, if we make exceptions for people who are __, then we should do the same for people who are @@@, ###, &&&, --- and ===. And where does that end? 
 > 
-> Of course, when some #*! people are negatively discriminating against \_\_\_ people, we should fight them. Bat that's all there is to it. Neutrality is our end goal. It's not a stop somewhere halfway. 
+> Of course, when some #*! people are negatively discriminating against \_\_\_ people, we should fight them. But that's all there is to it. Neutrality is our end goal. It's not a stop somewhere halfway. 
 > I'm very happy that I am where I am today because I am competent. Not because some people hired me because I am \_\_\_. 
 
-Everyone has something of value to contribute to the equation at work. Each employee was selected to
-perform a job because he or she was viewed as having the talents, experience, education and/or expertise
-necessary to achieve company goals. Just because someone is different from you, doesn’t mean their
-contributions are any less valid. Differences are what an organization draws on for its strength. When
-differing opinions and ideas are considered, supportable decisions are born. 
+Just because someone is different from you, doesn’t mean their
+contributions are any less valid. Differences are what an organization draws on for its strength. Everyone has something of value to contribute to the equation at work. Each employee was selected to perform a job because he or she was viewed as having the talents, experience, education and/or expertise necessary to achieve company goals. When differing opinions and ideas are considered, supportable decisions are born. 
 
 ### References
 [^1]: [Menezes, Álvaro & Prikladnicki, Rafael. (2018). Diversity in software engineering. 45-48](https://www.researchgate.net/publication/326079170_Diversity_in_software_engineering) 
@@ -69,3 +68,4 @@ differing opinions and ideas are considered, supportable decisions are born.
 [^4]: [Fixing the flawed approach to diversity - BCG](https://www.bcg.com/publications/2019/fixing-the-flawed-approach-to-diversity.aspx?utm_medium=Email&utm_source=201901DIVERSITY&utm_campaign=201901_DIVERSITY_IANDI_NONE_GLOBAL&utm_usertoken=72668727a50b366d71d3ea87ce70b221e5ccea0b&redir=true)
 [^5]: [Is Your Company’s Diversity Training Making You More Biased?](https://www.strategy-business.com/blog/Is-Your-Companys-Diversity-Training-Making-You-More-Biased?gko=72ffc)
 [^6]: [The concept of diversity ](https://www.vbcassdhd.org/vbchd/eo/documents/DIVERSITY.pdf)
+[^7]: [5 Strategies for Promoting Diversity in the Workplace](https://www.hult.edu/blog/promoting-diversity-in-workplace/)
