@@ -128,7 +128,7 @@ class BlogPostRoute extends React.PureComponent {
             <meta property="og:type" content="article" />
             <meta property="og:url" content={url} />
             <meta property="og:image" content={`${siteUrl}${withPrefix(post.frontmatter.image.publicURL)}`} />
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={post.frontmatter.title} />
             <meta name="twitter:description" content={post.excerpt} />
             <meta name="twitter:image" content={`${siteUrl}${withPrefix(post.frontmatter.image.publicURL)}`} />
