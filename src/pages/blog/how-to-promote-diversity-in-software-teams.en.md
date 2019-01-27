@@ -11,8 +11,6 @@ tags:
 image: ./images/20190125.jpg
 ---
 
-## What is diversity
-
 Diversity is any dimension that can be used to differentiate groups and people from one another. It is a concept and a set of conscious practices. It's main goal is to encompass acceptance and respect. It means understanding that each individual is unique, and recognizing our individual differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies.
 
 Diversity allows for the exploration of these differences in a safe, positive, and nurturing environment. It means understanding one another by surpassing simple tolerance to ensure people truly value their differences. This allows us both to embrace and also to celebrate the rich dimensions of diversity contained within each individual and place positive value on diversity in the community and in the workforce. 
@@ -51,9 +49,9 @@ In his book [Management 3.0: Leading Agile Developers, Developing Agile Leaders]
 >
 > I don't see why. 
 >
-> Either people who are \_\_\_ like software development, or they don't. (It's unlikely they've never heard of it. Unless they are ***) I don't favor an annual celebration day for \_\_\_ people in software development. And I don't need awards or programming languages named after people who are \_\_\_. I certainly don't like government subsidies for people who are \_\_\_. And I definitely don't like posi-tive discrimination (affirmative action) in favor of people who are \_\_\_. Because I think it is an insult to people like me who are both \_\_\_ and competent enough to create a career on their own. 
+> Either people who are \_\_\_ like software development, or they don't. (It's unlikely they've never heard of it. Unless they are ***) I don't favor an annual celebration day for \_\_\_ people in software development. And I don't need awards or programming languages named after people who are \_\_\_. I certainly don't like government subsidies for people who are \_\_\_. And I definitely don't like positive discrimination (affirmative action) in favor of people who are \_\_\_. Because I think it is an insult to people like me who are both \_\_\_ and competent enough to create a career on their own. 
 >
-> And besides, if we make exceptions for people who are __, then we should do the same for people who are @@@, ###, &&&, --- and ===. And where does that end? 
+> And besides, if we make exceptions for people who are \_\_\_, then we should do the same for people who are @@@, ###, &&&, --- and ===. And where does that end? 
 > 
 > Of course, when some #*! people are negatively discriminating against \_\_\_ people, we should fight them. But that's all there is to it. Neutrality is our end goal. It's not a stop somewhere halfway. 
 > I'm very happy that I am where I am today because I am competent. Not because some people hired me because I am \_\_\_. 

@@ -5,67 +5,63 @@ layout: post
 draft: false
 featured: true
 tags:
-  - leadership
-  - diversity
-  - management
+  - liderança
+  - diversidade
+  - gerenciamento
 image: ./images/20190125.jpg
 ---
 
-## What is diversity
+Diversidade é qualquer dimensão que pode ser usada para diferenciar pessoas umas das outroas. É um conceito e um conjunto de práticas. Seu objetivo principal é promover aceitação e respeito. Significa entender que cada indivíduo é único, e reconhecer nossas diferenças individuais, seja por raça, etnia, orientação sexual, situação econômica, idade, habilidades físicas, religiosidade, orientação política ou outras ideologias.
 
-Diversity is any dimension that can be used to differentiate groups and people from one another. It is a concept, and it's main goal is to encompass acceptance and respect. It means understanding that each individual is unique, and recognizing our individual differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies.
+A diversidade permite que essas diferenças sejam exploradas num ambiente seguro, positivo e de crescimento individual. Significa entender um ao outro além da tolerância, para garantir que as pessoas realmente valorizem suas diferenças. Isso nos faz dar valor às diferenças de cada um, favorecendo a diversidade na comunidade e no ambiente de trabalho.
 
-Diversity allows for the exploration of these differences in a safe, positive, and nurturing environment. It means understanding one another by surpassing simple tolerance to ensure people truly value their differences. This allows us both to embrace and also to celebrate the rich dimensions of diversity contained within each individual and place positive value on diversity in the community and in the workforce. 
+## Por que a diversidade é tão importante em times de software?
+Décadas de pesquisas feitas por cientistas oerganizacionais, psicólogos, sociólogos, economistas e demógrafos mostram que grupos socialmente diversos (isto é, aqueles que possuem diversidade de raças, etnias, sexos e orientação sexual) são mais inovadores que grupos homogêneos. [^2]
 
-## Why is diversity so important in software teams?
+Práticas realacionadas ao ambiente de trabalho podem contribuir para a inclusão como também para resultados organizacionais. A diversidade pode impactar positivamente em aspectos como eficiências de inovação e trabalho em grupo em diferentes fases do desenvolvimento de software.
 
-Decades of research by organizational scientists, psychologists, sociologists, economists and demographers show that socially diverse groups (that is, those with a diversity of race, ethnicity, gender and sexual orientation) are more innovative than homogeneous groups. [^2]
+Várias dificuldades foram encontradas em relação à igualdade na indústria da tecnologia da informação (TI), como barreiras à inclusão de pessoas com deficiência. Além disso, o ambiente de desenvolvimento de software consiste em uma maioria de homens representando a sociedade de forma desigual e portanto, existe uma grande necessidade de se incluir práticas que promovam a inclusão e um melhor entendimento desse fenômeno para promover a igualdade de oportunidades dentro do escopo da engenharia de software. [^1]
 
-Practices related to the work environment could contribute to inclusion as well as to organizational results. Diversity could impact positively on aspects such as innovation efficiency and teamwork on different phases of software development and knowledge areas.
+## Como empresas e líderes podem promover diversidade dentro do local de trabalho
+### 1. Estimule o diálogo
+A melhor forma de promover diversidade em seu ambiente de trabalho é criar um entendimento geral em torno desse conceito. Conhecer seus colegas de trabalho de uma forma mais pessoal, independente de sua cultura ou origem, vai ajudá-lo a entendê-los melhor, a valorizar mais as diferenças, e promover um ambiente de trabalho inclusivo e receptivo.
 
-Difficulties have been encountered concerning equality in the IT industry, as well as barriers to inclusion of people with disabilities. Finally, the software development environment still consists of a majority of men unequally representing society, so there is an open field to practices that promote inclusion and a better understanding of this phenomenon to promote the equity of opportunities within the scope of software engineering[^1].
+### 2. Reconsidere estereótipos
+Estereótipos são imagens ou ideias extremamente simplificadas sobre grupos sociais - como por exemplo, adultos mais velhos são algumas vezes associados à pessoas que não são "boas com tecnologia". E, mesmo que isso possa soar inofensivo, estereótipos são extremamente equivocados e podem impactar negativamente em decisões no mercado de trabalho, na educação, no sistema de justiça, nos sistemas imobiliário e financeiro. Ao reconsiderar seus estereótipos internamente e se questionar se as afirmações que fazemos tem embasamento científico, garantimos que todos são valorizados igualmente.
 
-## How companies and leaders can promote diversity within their workforce
-### 1. Encourage dialogue
-The best way to promote diversity in your workplace is by embracing it and working to build an understanding. Getting to know your colleagues on a personal level, regardless of their culture and background, will help you to find common ground, deepen your appreciation of differences, and promote an inclusive and welcoming work environment.
+### 3. Valorize as diferenças
+Em resumo, quando as pessoas fazem parte de um mesmo grupo, o viés racial - e talvez outras formas influências negativas - tendem a desaparecer. Sendo assim, uma excelente forma de gerar inclusão no ambiente de trabalho é fazer com que todos se sintam parte do mesmo time.
 
-### 2. Reconsider stereotypes
-Stereotypes are oversimplified images or ideas about social identity groups — for instance, older adults are sometimes assumed to be “bad at technology.” And while this may seem harmless, stereotypes are overwhelmingly inaccurate and can negatively impact decisions around employment, education, the justice system, housing and financial services. By taking time to reconsider stereotypes internally and question whether the assumptions we are making are supported by real evidence specific to an individual, we can work to ensure everyone is valued equally.
+Vários estudos[^5] suportam esse ideia, pelo menos de forma implícita, e uma forma de criar um sentimento de grupo é estabeler metas compartilhadas. Pode se iniciar um programa de inclusão criando times em que seus membros são importantes porque fazem parte do mesmo grupo, e por compartilhar os mesmos interesses. Focar em objetivos e em uma identidade comums, será extremamente importante para eliminar qualquer tipo de viés - seja dentro de sua empresa ou para a sociedade com um todo.
 
+## O que não se deve fazer para promover diversidade
+Eu particularmente não sou a favor de se criar objetivos de contratação ou qualquer tipo de iniciativa que poderiam criar um viés em seus processos em termos de diversidade. Além disso, decisões de promoções ou avaliações nunca devem ser baseados em critérios de diversidade. Uma pesquisa conduzida pela BCG (Boston Consulting Group) mostrou que este é um dos grandes riscos de se entender e aplicar incorretamente diversidade em uma organização.[^4]  
 
-### 3. Seek difference
-In short, when people perceive one another as members of the same in-group, racial bias — and possibly other forms of bias against groups of people — tends to melt away. Thus, the way to increase inclusion in the workplace is to make everyone feel like they’re part of the same team.
+Recentemente, tem se observado que o movimento para promover diversidade em times de software está focado basicamente em contratar mais mulheres. Mesmo sendo uma causa extremamente nobre, perde-se assim o propósito principal do conceito. Se não for expandido, o movimento corre o risco de alienar outros grupos minoritários, e prejudicar a diversidade dentro de diferentes contextos.
 
-Many studies[^5] support this idea, at least implicitly, and one way to create an in-group feeling among people is to establish shared goals. Inclusion programs can make a start by creating teams whose members matter to one another because they’re part of the same in-group, pursuing the same interests. Focusing on common goals, and a common identity, will be critically important for eliminating bias — both within the enterprise and in leading the way for society at large.
+Em seu livro [Management 3.0: Leading Agile Developers, Developing Agile Leaders](https://www.amazon.com/gp/product/0321712471/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321712471&linkCode=as2&tag=hugomn-20&linkId=7032864bf8f0b16d34dc719dde244755), Jurgen Appelo descreve uma excelente perspectiva na visão de um empregdo:
 
-## What diversity should not be about
-I'm not personally in favor of hiring targets or any kind of initiative that could bias your processes in terms of diversity. Besides that, promotion and evaluation decisions should never be based on diversity criteria.  One research conducted by BCG showed that this is one of the big risks of misunderstanding diversity in an organization. [^4] 
-
-In his book [Management 3.0: Leading Agile Developers, Developing Agile Leaders](https://www.amazon.com/gp/product/0321712471/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321712471&linkCode=as2&tag=hugomn-20&linkId=7032864bf8f0b16d34dc719dde244755), Jurgen Appelo paints a nice picture from the perspective of an employee:
-
-> I am \_\_\_. It's not by choice. That's how I was born. I am perfectly happy being \_\_\_. It's no big deal. It's just the way it is. But other people are making a fuss about it. 
+> Eu sou \_\_\_. Não é por escolha. Eu nasci assim. E sou perfeitamente feliz sendo \_\_\_. Não é nada demais, é simplesmente o jeito que é. Mas as outras pessoas tem criado um alvoroço sobre isso.
 >
-> Some say there ought to be more people who are \_\_\_ in software development. They say we must invite people who are \_\_\_ to try a technical career, because there aren't enough of them in our industry. And some say we should hire people who are because they "add diversity" to our teams. 
+> Alguns dizem que deveria existe mais pessoas que são \_\_\_ em times de software. Eles dizem que deveríamos convidar pessoas que são \_\_\_ para tentar uma carreira técnica, por que não existem \_\_\_ suficientes em nosso setor. E alguns dizem que deveríamos contratar pessoas que são \_\_\_ porque eles melhoram a diversidade do time.
 >
-> I don't see why. 
+> Eu não entendo por quê. 
 >
-> Either people who are \_\_\_ like software development, or they don't. (It's unlikely they've never heard of it. Unless they are ***) I don't favor an annual celebration day for \_\_\_ people in software development. And I don't need awards or programming languages named after people who are \_\_\_. I certainly don't like government subsidies for people who are \_\_\_. And I definitely don't like posi-tive discrimination (affirmative action) in favor of people who are \_\_\_. Because I think it is an insult to people like me who are both \_\_\_ and competent enough to create a career on their own. 
+> Ou as pessoas que são \_\_\_ gostam de desenvolvimento de software ou não. (É bem improvável que eles nunca tenham ouvido falar sobre essa carreira. A não ser que eles sejam +++). Eu não sou a favor de uma celebração anual para \_\_\_ no desenvolvimento de software. E eu não preciso de prêmios ou linguagens de programação com nomes de pessoas que são \_\_\_. Eu não sou a favor de subsídios do governo para pessoas que são \_\_\_. E eu definitivamente não gosto da discrminação positiva (ações afirmativas) em favor de pessoas que são \_\_\_. Porque acredito que isso é um insulto às pessoas que como eu são \_\_\_ e competentes o bastante para criar uma carreira por conta própria.
 >
-> And besides, if we make exceptions for people who are __, then we should do the same for people who are @@@, ###, &&&, --- and ===. And where does that end? 
+> E, além disso, se abrirmos exceções para pessoas que são \_\_\_, então precisaremos fazer o mesmo para quem é ###, &&&, --- e ===. E quando isso termina? 
 > 
-> Of course, when some #*! people are negatively discriminating against \_\_\_ people, we should fight them. Bat that's all there is to it. Neutrality is our end goal. It's not a stop somewhere halfway. 
-> I'm very happy that I am where I am today because I am competent. Not because some people hired me because I am \_\_\_. 
+> Obviamente, quando algum #*! descriminar negativamente as pessoas que são \_\_\_, devemos condenar e recriminar essa prática. E isso é tudo que se deve fazer. Neutralidade é nosso objetivo final. Não é uma parada no meio do caminho de algum lugar.
+> 
+> Eu sou muito feliz por estar onde estou hoje devido a minha competência. Não porque algumas pessoas me contraram porque sou  \_\_\_.
 
-Everyone has something of value to contribute to the equation at work. Each employee was selected to
-perform a job because he or she was viewed as having the talents, experience, education and/or expertise
-necessary to achieve company goals. Just because someone is different from you, doesn’t mean their
-contributions are any less valid. Differences are what an organization draws on for its strength. When
-differing opinions and ideas are considered, supportable decisions are born. 
+Só porque alguém é diferente de você, não significa que suas contribuições são menos válidas. As forças de uma empresa estão principalmente nas diferenças de seus funcionários. Todos possuem algo valioso para contribuir no ambiente de trabalho. Cada funcionário foi selecionado para executar uma função porque seu talento, experiências, educação e expertise foram considerados importantes para os objetivos da empresa. Quando diferentes opiniões e ideias são colocadas na mesa, decisões inclusivas e inovadoras nascem.
 
-### References
+### Referências
 [^1]: [Menezes, Álvaro & Prikladnicki, Rafael. (2018). Diversity in software engineering. 45-48](https://www.researchgate.net/publication/326079170_Diversity_in_software_engineering) 
 [^2]: [How Diversity Makes Us Smarter. Scientific American](https://www.scientificamerican.com/article/how-diversity-makes-us-smarter/)
 [^3]: [Management 3.0: Leading Agile Developers, Developing Agile Leaders. Apello, Jurgen](https://www.amazon.com/gp/product/0321712471/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321712471&linkCode=as2&tag=hugomn-20&linkId=7032864bf8f0b16d34dc719dde244755)
 [^4]: [Fixing the flawed approach to diversity - BCG](https://www.bcg.com/publications/2019/fixing-the-flawed-approach-to-diversity.aspx?utm_medium=Email&utm_source=201901DIVERSITY&utm_campaign=201901_DIVERSITY_IANDI_NONE_GLOBAL&utm_usertoken=72668727a50b366d71d3ea87ce70b221e5ccea0b&redir=true)
 [^5]: [Is Your Company’s Diversity Training Making You More Biased?](https://www.strategy-business.com/blog/Is-Your-Companys-Diversity-Training-Making-You-More-Biased?gko=72ffc)
 [^6]: [The concept of diversity ](https://www.vbcassdhd.org/vbchd/eo/documents/DIVERSITY.pdf)
+[^7]: [5 Strategies for Promoting Diversity in the Workplace](https://www.hult.edu/blog/promoting-diversity-in-workplace/)
