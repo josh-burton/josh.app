@@ -1,5 +1,5 @@
 ---
-title: "What diversity should not be about, mainly in software teams"
+title: "What diversity should not be about, especially in software teams"
 date: '2019-01-25'
 layout: post
 draft: false
