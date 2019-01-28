@@ -1,5 +1,5 @@
 ---
-title: "Como promover diversidade em times de software"
+title: "Como não se deve promover diversidade, principalmente em times de software"
 date: '2019-01-25'
 layout: post
 draft: false
@@ -11,9 +11,7 @@ tags:
 image: ./images/20190125.jpg
 ---
 
-Diversidade é qualquer dimensão que pode ser usada para diferenciar pessoas umas das outroas. É um conceito e um conjunto de práticas. Seu objetivo principal é promover aceitação e respeito. Significa entender que cada indivíduo é único, e reconhecer nossas diferenças individuais, seja por raça, etnia, orientação sexual, situação econômica, idade, habilidades físicas, religiosidade, orientação política ou outras ideologias.
-
-A diversidade permite que essas diferenças sejam exploradas num ambiente seguro, positivo e de crescimento individual. Significa entender um ao outro além da tolerância, para garantir que as pessoas realmente valorizem suas diferenças. Isso nos faz dar valor às diferenças de cada um, favorecendo a diversidade na comunidade e no ambiente de trabalho.
+Diversidade é qualquer dimensão que pode ser usada para diferenciar pessoas umas das outroas. Seu objetivo principal é promover aceitação e respeito. Significa entender um ao outro além da tolerância, para garantir que as pessoas realmente valorizem suas diferenças. Significa entender que cada indivíduo é único, e reconhecer nossas diferenças individuais, seja por raça, etnia, orientação sexual, situação econômica, idade, habilidades físicas, religiosidade, orientação política ou outras ideologias. E, mesmo que isso pareça algo fácil de se conseguir no ambiente de trabalho, resolvi falar um pouco sobre o que diversidade **não** deve ser.
 
 ## Por que a diversidade é tão importante em times de software?
 Décadas de pesquisas feitas por cientistas oerganizacionais, psicólogos, sociólogos, economistas e demógrafos mostram que grupos socialmente diversos (isto é, aqueles que possuem diversidade de raças, etnias, sexos e orientação sexual) são mais inovadores que grupos homogêneos. [^2]
@@ -55,7 +53,9 @@ Em seu livro [Management 3.0: Leading Agile Developers, Developing Agile Leaders
 > 
 > Eu sou muito feliz por estar onde estou hoje devido a minha competência. Não porque algumas pessoas me contraram porque sou  \_\_\_.
 
-Só porque alguém é diferente de você, não significa que suas contribuições são menos válidas. As forças de uma empresa estão principalmente nas diferenças de seus funcionários. Todos possuem algo valioso para contribuir no ambiente de trabalho. Cada funcionário foi selecionado para executar uma função porque seu talento, experiências, educação e expertise foram considerados importantes para os objetivos da empresa. Quando diferentes opiniões e ideias são colocadas na mesa, decisões inclusivas e inovadoras nascem.
+As forças de uma empresa estão principalmente nas diferenças de seus funcionários. E nós realmente precisamos buscar a diversidade, mas precisamos realmente começar simples. Comece pensando sobre você, reveja seus conceitos. Aplique isso ou seu time, e como você lida com seus colegas no seu dia-a-dia. Todos possuem algo valioso para contribuir no ambiente de trabalho. Cada funcionário foi selecionado para executar uma função porque seu talento, experiências, educação e expertise foram considerados importantes para os objetivos da empresa. 
+
+Defenda as minorias, mas **nunca** levante a bandeira de uma específica. Quando diferentes **opiniões** e **ideias** são colocadas na mesa, **decisões inclusivas e inovadoras** nascem.
 
 ### Referências
 [^1]: [Menezes, Álvaro & Prikladnicki, Rafael. (2018). Diversity in software engineering. 45-48](https://www.researchgate.net/publication/326079170_Diversity_in_software_engineering) 

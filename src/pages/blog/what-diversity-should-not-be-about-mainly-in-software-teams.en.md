@@ -1,5 +1,5 @@
 ---
-title: "How to promote diversity in software teams"
+title: "What diversity should not be about, mainly in software teams"
 date: '2019-01-25'
 layout: post
 draft: false
@@ -11,9 +11,7 @@ tags:
 image: ./images/20190125.jpg
 ---
 
-Diversity is any dimension that can be used to differentiate groups and people from one another. It is a concept and a set of conscious practices. It's main goal is to encompass acceptance and respect. It means understanding that each individual is unique, and recognizing our individual differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies.
-
-Diversity allows for the exploration of these differences in a safe, positive, and nurturing environment. It means understanding one another by surpassing simple tolerance to ensure people truly value their differences. This allows us both to embrace and also to celebrate the rich dimensions of diversity contained within each individual and place positive value on diversity in the community and in the workforce. 
+Diversity is any dimension that can be used to differentiate groups and people from one another. It's main goal is to encompass acceptance and respect. It means understanding by surpassing simple tolerance to ensure people truly value their differences. These can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies. And, even if it looks simple to accomplish, I want to give in this post a quick overview of what I think diversity should **not** be about.
 
 ## Why is diversity so important in software teams?
 
@@ -56,8 +54,9 @@ In his book [Management 3.0: Leading Agile Developers, Developing Agile Leaders]
 > Of course, when some #*! people are negatively discriminating against \_\_\_ people, we should fight them. But that's all there is to it. Neutrality is our end goal. It's not a stop somewhere halfway. 
 > I'm very happy that I am where I am today because I am competent. Not because some people hired me because I am \_\_\_. 
 
-Just because someone is different from you, doesn’t mean their
-contributions are any less valid. Differences are what an organization draws on for its strength. Everyone has something of value to contribute to the equation at work. Each employee was selected to perform a job because he or she was viewed as having the talents, experience, education and/or expertise necessary to achieve company goals. When differing opinions and ideas are considered, supportable decisions are born. 
+Differences are what an organization draws on for its strength. And we really need to seek diversity, but we need to start small. Start thinking about you, review your concepts. Apply it to your team, and how you deal with your colleagues. Everyone has something of value to contribute to the equation at work. Each employee was selected to perform a job because he or she was viewed as having the talents, experience, education and/or expertise necessary to achieve company goals. 
+
+Defend minorities, but **never** raise the flag of a specific one. When differing **opinions** and **ideas** are considered, **supportable decisions** are born. 
 
 ### References
 [^1]: [Menezes, Álvaro & Prikladnicki, Rafael. (2018). Diversity in software engineering. 45-48](https://www.researchgate.net/publication/326079170_Diversity_in_software_engineering) 
