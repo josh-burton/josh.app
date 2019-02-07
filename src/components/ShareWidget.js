@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FacebookIcon from 'react-icons/lib/fa/facebook';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GoogleIcon from 'react-icons/lib/fa/google-plus';
 import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
@@ -67,27 +66,11 @@ const ShareWidget = ({ disqusShortname, url, message }) => {
           </A>
         </li>
         <li>
-          <A href={links.facebook(url, message)} target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Share on facebook"
-            title="Share on facebook">
-            <FacebookIcon />
-          </A>
-        </li>
-        <li>
           <A href={links.linkedin(url, message)} target="_blank"
             rel="noreferrer noopener"
             aria-label="Share on Linkedin"
             title="Share on Linkedin">
             <LinkedinIcon />
-          </A>
-        </li>
-        <li>
-          <A href={links.google(url, message)} target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Share on Google+"
-            title="Share on Google+">
-            <GoogleIcon />
           </A>
         </li>
         <DisqusContainer>

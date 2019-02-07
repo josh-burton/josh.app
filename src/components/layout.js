@@ -7,16 +7,14 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { StaticQuery, graphql, withPrefix } from 'gatsby';
 import { addLocaleData, IntlProvider, FormattedMessage } from 'react-intl';
 import en from '../data/messages/en';
-import pt from '../data/messages/pt';
 import enData from 'react-intl/locale-data/en';
-import ptData from 'react-intl/locale-data/pt';
 import theme from '../themes/theme';
 import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from 'ptz-i18n';
 import Helmet from 'react-helmet';
 
-const messages = { en, pt };
+const messages = { en };
 
-addLocaleData([...enData, ...ptData]);
+addLocaleData([...enData]);
 
 const Container = styled(FixedContainer)`
   padding: ${props => props.theme.padding};
@@ -199,7 +197,6 @@ export default props => (
             sourceCodeLink
             menu {
               label
-              link
               slug
             }
           }

@@ -1,37 +1,37 @@
 const languages = require('./languages');
 
 module.exports = {
-  siteUrl: 'https://www.hugomagalhaes.com',
-  description: 'Senior software engineer and agile manager. React, and Node.js enthusiast. Engineering Lead @ BCG Digital Ventures. Berlin, Germany',
+  siteUrl: 'https://www.josh.app',
+  description: 'Mobile Developer',
   author: {
-    name: 'Hugo Nogueira',
-    bio: 'Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href="https://www.bcgdv.com">BCG Digital Ventures</a>. Berlin, Germany',
-    homeCity: 'Berlin',
-    email: 'hugomn@gmail.com',
-    twitter: 'hugomn',
-    defaultLink: 'https://github.com/hugomn'
+    name: 'Josh Burton',
+    bio: 'Freelance Mobile Developer @ <a href="https://www.arklabs.nz">Ark Labs</a><br/>Auckland, New Zealand',
+    homeCity: 'Auckland',
+    email: 'josh@arklabs.nz',
+    twitter: 'athornz',
+    defaultLink: 'https://github.com/athornz',
+    rss: 'rss.xml'
   },
-  sourceCodeLink: 'https://github.com/hugomn/hugomagalhaes.com',
-  disqusShortname: 'hugomagalhes',
+  sourceCodeLink: 'https://github.com/athornz/josh.app',
+  disqusShortname: 'josh-app',
   menu: [
     {label: 'home', slug: '/'},
     {label: 'blog', slug: '/blog/'},
-    {label: 'about', slug: '/about/'},
-    {label: 'contact', slug: '/contact/'},
-    {label: 'call', link: 'http://call.hugomagalhaes.com/'},
-  ],  
+    // {label: 'about', slug: '/about/'},
+    // {label: 'contact', slug: '/contact/'}
+  ],
   languages,
   contact: [
     {
       type: 'email',
-      value: 'hugomn@gmail.com',
-      link: 'mailto:hugomn@gmail.com'
+      value: 'josh@arklabs.nz',
+      link: 'mailto:josh@arklabs.nz'
     },
     {
       type: 'phone',
-      value: '+49 151 74477807',
-      country: 'de',
-      link: 'tel:+49 151 74477807'
+      value: '+64 211037200',
+      country: 'nz',
+      link: 'tel:+64 211037200'
     }
   ]
 };

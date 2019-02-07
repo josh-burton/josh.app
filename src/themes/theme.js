@@ -283,19 +283,6 @@ const theme = {
         padding: `2rem 0 0 0`
       },
     }
-  },
-  i18n: {
-    selectLanguage: {
-      li: {
-        margin: `0 0 0 5px`,
-        padding: `${scale(-8)} ${scale(-2)} ${scale(-5)} ${scale(-2)}`,
-        fontSize: scale(3),
-        borderRadius: '0.2rem',
-        selected: {
-          backgroundColor: colors.lightGreen
-        }
-      }
-    }
   }
 };
 

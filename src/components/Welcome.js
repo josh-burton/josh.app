@@ -3,11 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Gravatar from 'react-gravatar';
 import { Grid, Cell } from 'styled-css-grid';
-import FacebookIcon from 'react-icons/lib/fa/facebook';
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import LinkedinIcon from 'react-icons/lib/fa/linkedin-square';
-import InstagramIcon from 'react-icons/lib/fa/instagram';
-import DribbleIcon from 'react-icons/lib/fa/dribbble';
 import GithubIcon from 'react-icons/lib/fa/github';
 import { media } from '../constants/responsive';
 
@@ -83,32 +80,17 @@ const Welcome = ({ author, className }) => {
         <Bio dangerouslySetInnerHTML={{ __html: author.bio }} />
         <SocialLinks>
           <li>
-            <A href="https://facebook.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
-              <FacebookIcon />
-            </A>
-          </li>
-          <li>
-            <A href="https://twitter.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+            <A href="https://twitter.com/athornz" target="_blank" rel="noreferrer noopener">
               <TwitterIcon />
             </A>
           </li>
           <li>
-            <A href="https://linkedin.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+            <A href="https://www.linkedin.com/in/joshburtonnz/" target="_blank" rel="noreferrer noopener">
               <LinkedinIcon />
             </A>
           </li>
           <li>
-            <A href="https://instagram.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
-              <InstagramIcon />
-            </A>
-          </li>
-          <li>
-            <A href="https://dribbble.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
-              <DribbleIcon />
-            </A>
-          </li>
-          <li>
-            <A href="https://github.hugomagalhaes.com" target="_blank" rel="noreferrer noopener">
+            <A href="https://github.com/athornz" target="_blank" rel="noreferrer noopener">
               <GithubIcon />
             </A>
           </li>

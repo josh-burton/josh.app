@@ -203,47 +203,6 @@ export const pageQuery = graphql`
           }
           publicURL
         }
-        structuredData {
-          alternativeHeadline
-          type
-          dependencies
-          proficiencyLevel
-          articleSection
-          pageEnd
-          pageStart
-          pagination
-          about {
-            name
-            alternateName
-            description
-            identifier
-            image
-            sameAs
-          }
-          accessMode
-          accessModeSufficient
-          accessibilityAPI
-          accessibilityControl
-          accessibilitySummary
-          aggregateRating
-          audience
-          author
-          comment
-          commentCount
-          contentLocation
-          dateCreated
-          dateModified
-          datePublished
-          discussionUrl
-          educationalUse
-          isAccessibleForFree
-          isFamilyFriendly
-          keywords
-          locationCreated
-          thumbnailUrl
-          version
-          video
-        }
       }
     }
     site {

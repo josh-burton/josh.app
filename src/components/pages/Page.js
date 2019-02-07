@@ -41,7 +41,7 @@ const H1 = styled.h1`
 `;
 
 const Page = (props) => {
-  const author = getAuthor('hugomn');
+  const author = getAuthor('athornz');
   author.description = props.i18n.description;
   const structuredData = getStructuredDataForAuthor(author);
 

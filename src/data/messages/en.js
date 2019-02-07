@@ -1,10 +1,10 @@
 module.exports = {
-  'title': 'Hugo Nogueira',
-  'header.title': 'Hugo Nogueira',
-  'header.subTitle': 'Engineering lead and agile manager.',
+  'title': 'Josh Burton',
+  'header.title': 'Josh Burton',
+  'header.subTitle': 'Mobile Developer',
   'home': 'Home',
   'about': 'About',
-  'blog': 'Blog',
+  'blog': 'All Posts',
   'all': 'All',
   'posts': 'Posts',
   'posts.seeMore': 'See all posts →',
@@ -15,7 +15,6 @@ module.exports = {
       other {posts}
     } tagged with`,
   'contact': 'Contact',
-  'call': 'Schedule a call',
   'index.featured': 'Featured',
   'index.stories': 'All stories'
 };

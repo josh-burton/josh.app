@@ -5,7 +5,6 @@ import styled, { keyframes } from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 import { withPrefix } from 'gatsby';
 import FaHeart from 'react-icons/lib/fa/heart';
-import SelectLanguage from './SelectLanguage';
 import FixedContainer from './FixedContainer';
 import { media, visible } from '../constants/responsive';
 
@@ -84,13 +83,11 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
               </a>{' by '} <span>{author.name}</span>
             </span>
           </LeftCell>
-          <MiddleCell middle>
+          <MiddleCell middle />
+          <RightCell middle>
             <a href={sourceCodeLink} target="_blank">
               <GithubIcon />
             </a>
-          </MiddleCell>
-          <RightCell middle>
-            <SelectLanguage langs={langs} className="select-languages" /> 
           </RightCell>
         </Grid>
       </FixedContainer>

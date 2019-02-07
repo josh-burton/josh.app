@@ -44,25 +44,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-16818992-1',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Hugo Nogueira',
-        short_name: 'Hugo Nogueira',
-        icons: [
-          {
-            src: '/logo.svg',
-            sizes: 'any',
-            type: 'image/svg+xml',
-          },
-        ],
-        start_url: '/',
-        background_color: 'white',
-        theme_color: 'white',
-        display: 'minimal-ui',
+        trackingId: '',
       },
     },
     'gatsby-plugin-offline',

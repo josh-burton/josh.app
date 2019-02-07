@@ -24,7 +24,7 @@ const EditIcon = styled(FaEdit)`
 
 const getEditLink = (fileAbsolutePath) => {
   const path = fileAbsolutePath.split('/src/')[1];
-  return `https://github.com/hugomn/hugomn/blob/master/src/${path}`;
+  return `https://github.com/athornz/josh.app/blob/master/src/${path}`;
 };
 
 const getLabel = () => {

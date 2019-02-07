@@ -1,22 +1,20 @@
 const authors = {
-  hugomn: {
-    name: 'Hugo Nogueira',
-    additionalName: 'hugomn',
-    address: 'Berlin CA',
-    birthDate: '1986-09-01',
-    birthPlace: 'Juiz de Fora BR',
-    brand: 'Hugo Nogueira, Software Engineer, Lead Front-end engineer, Senior ReactJs developer',
+  athornz: {
+    name: 'Josh Burton',
+    additionalName: 'athornz',
+    address: 'Auckland, New Zealand',
+    brand: 'Mobile Developer @ Ark Labs',
     children: '...',
-    email: 'hugomn@gmail.com',
-    familyName: 'Nogueira',
+    email: 'josh@arklabs.nz',
+    familyName: 'Burton',
     gender: 'Male',
-    givenName: 'Hugo',
+    givenName: 'Josh',
     height: '...',
-    homeLocation: 'Berlin',
-    jobTitle: 'Software Engineering Lead',
+    homeLocation: 'Auckland',
+    jobTitle: 'Mobile Developer',
     knows: '...',
     memberOf: '...',
-    nationality: 'Brazilian',
+    nationality: 'New Zealander',
     owns: '...',
     parent: '...',
     performerIn: '...',
@@ -24,15 +22,6 @@ const authors = {
     relatedTo: '...',
     seeks: '...',
     sibling: '...',
-    spouse: {
-      additionalName: 'Lunara Leto Costa',
-      name: 'Lunara Leto Costa',
-      givenName: 'Lunara',
-      familyName: 'Costa',
-      gender: 'Female',
-      nationality: 'Brazilian',
-      homeLocation: 'Berlin'
-    },
     telephone: '...',
     weight: '...',
     workLocation: '...',
@@ -40,9 +29,9 @@ const authors = {
     description: '...',
     disambiguatingDescription: '...',
     identifier: '...',
-    image: 'http://www.gravatar.com/avatar/9174fca44b5ca403593ac9cb2407e0e7',
-    sameAs: 'https://hugomagalhaes.com/en/about/',
-    url: 'https://hugomagalhaes.com/en/about/'
+    image: 'https://www.gravatar.com/avatar/4aa6db42c30f72b99277993b12d57af3?s=200',
+    sameAs: 'https://josh.app',
+    url: 'https://josh.app'
   }
 };
 
