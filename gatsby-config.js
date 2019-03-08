@@ -44,7 +44,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '',
+        trackingId: 'UA-135893520-1',
+        anonymize: true
       },
     },
     'gatsby-plugin-offline',
@@ -80,7 +81,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-i18n-tags',
-      options: { // Default options        
+      options: { // Default options
         tagPage: 'src/templates/tag-page.js',
         tagsUrl: '/tags/',
         langKeyForNull: 'en',

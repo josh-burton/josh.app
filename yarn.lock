@@ -5759,9 +5759,9 @@ fastparse@^1.1.1:
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
   integrity sha1-0eJkOzipTXWDtHkGDmxK/8lAcfg=
 
-"favicons-webpack-plugin@git+https://github.com/Creatiwity/favicons-webpack-plugin.git#f262255febeeca348bf7ae5cc140e0386c074e2c":
+"favicons-webpack-plugin@https://github.com/Creatiwity/favicons-webpack-plugin.git#f262255febeeca348bf7ae5cc140e0386c074e2c":
   version "0.0.9"
-  resolved "git+https://github.com/Creatiwity/favicons-webpack-plugin.git#f262255febeeca348bf7ae5cc140e0386c074e2c"
+  resolved "https://github.com/Creatiwity/favicons-webpack-plugin.git#f262255febeeca348bf7ae5cc140e0386c074e2c"
   dependencies:
     core-js "^2.5.7"
     favicons "^5.1.1"
