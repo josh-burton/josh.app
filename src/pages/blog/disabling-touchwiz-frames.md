@@ -3,7 +3,7 @@ title: "Disabling Touchwiz Icon Frames"
 date: '2017-05-04'
 layout: post
 draft: false
-featured: true
+featured: false
 tags:
   - samsung
   - google

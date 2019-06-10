@@ -3,7 +3,7 @@ title: "Blazing Gradle builds with a remote build cache"
 date: '2019-03-08'
 layout: post
 draft: false
-featured: true
+featured: false
 tags:
   - gradle
   - google cloud

@@ -3,7 +3,7 @@ title: "Kotlin Metadata, Jackson and Proguard"
 date: '2017-06-08'
 layout: post
 draft: false
-featured: true
+featured: false
 tags:
   - android
   - kotlin
